@@ -1,0 +1,1054 @@
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+/* Nav */
+.heading-nav {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 53px;
+    margin-bottom: 55px;
+}
+
+.container .heading-nav ul {
+    display: flex;
+    gap: 50px;
+}
+
+.container .heading-nav ul li a {
+    color: #2F3035;
+    font-family: 'Inter';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration: none;
+    list-style: none;
+}
+
+.container .heading-nav #logo-tittle {
+    color: #2F3035;
+    font-family: 'Inter';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+.container .heading-nav #logo-address {
+    color: #2F3035;
+    font-family: 'Inter';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.container .nav ol {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 13px;
+    background: #F0F0F4;
+}
+
+.container .nav ol li a {
+    text-decoration: none;
+    color: #2F3035;
+    font-family: 'inter';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+    transition: 0.4s all ease;
+    position: relative;
+    padding-bottom: 14px;
+}
+
+.container .nav ol li a:hover,
+.container .nav ol li a:active {
+    font-weight: 600;
+}
+
+.container .nav ol li a:hover::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: #1C62CD;
+}
+
+.container .nav ul{
+    margin-top: 46px;
+    margin-bottom: 41px;
+    display: flex;
+    gap: 10px;
+}
+
+.container .nav ul li a{
+    text-decoration: none;
+    color: #C4C4C4;
+    font-family: 'Inter';
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.container .nav-jetSkis-tittle{
+    color: #2F3035;
+    font-family: 'Inter';
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.container .jet-skis{
+    margin-top: 26px;
+}
+
+.container .jet-skis ul{
+    display: flex;
+    gap: 10px;
+}
+
+.container .jet-skis ul:hover{
+    cursor: pointer;
+}
+
+.container .jet-skis ul li{
+    font-family: 'Inter';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    opacity: 0.7;
+}
+
+.container .jet-skis ul li a{
+    text-decoration: none;
+    color: #2F3035;
+}
+
+.container .jet-skis ul li:nth-child(1){
+    border-radius: 3px;
+    background: #F0F0F4;
+    padding: 4px 28px 4px 22px;
+}
+
+.container .jet-skis ul li:nth-child(2) {
+    border-radius: 3px;
+    background: #F0F0F4;
+    padding: 4px 23px 4px 22px;
+}
+
+.container .jet-skis ul li:nth-child(3) {
+    border-radius: 3px;
+    background: #F0F0F4;
+    padding: 4px 41px 4px 22px;
+}
+
+.container .jet-skis ul li:nth-child(4) {
+    border-radius: 3px;
+    background: #F0F0F4;
+    padding: 4px 23px 4px 22px;
+}
+
+/*Main section*/
+.main aside{
+    /* background-color: red; */
+}
+
+.main .section{
+    display: flex;
+    align-items: start;
+    margin-top: 50px;
+}
+
+.main .section-card{
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    align-items: center;
+    gap: 25px;
+}
+
+/*Aside*/
+.section aside .options{
+    position: relative;
+    font-family: SF Pro Display;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.44px;
+    text-transform: uppercase;
+}
+
+.section aside .options:hover::after{
+    position: absolute;
+    left: 0;
+    top: 20px;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #1C62CD;
+}
+.section aside .options a{
+    color: #2F3035;
+    text-decoration: none;
+}
+
+/*first detail */
+.section aside .first-detail{
+    margin-bottom: 41px;
+}
+
+.section aside .first-detail .availability{
+    padding-top: 48px;
+    color: #2F3035;
+    font-family: 'Inter';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding-bottom: 19px;
+}
+
+.section aside .first-detail label{
+    color: #2F3035;
+    font-family: 'Inter';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.section aside .first-detail label .span1{
+    padding-right: 42px;
+}
+/* Second detail*/
+
+.section aside .second-detail .new-items{
+    color:  #2F3035;
+    font-family: 'Inter';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding-bottom: 20px;
+}
+
+.section aside .second-detail label{
+    color: #000;
+    font-family: 'Inter';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.section aside .second-detail label span{
+    margin-right: 20px;
+}
+
+/* Third detail */
+.section aside .third-detail .brand{
+    margin-top: 41px;
+    color: #48494D;
+    font-family: 'Inter';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding-bottom: 22px;
+}
+
+.section aside .third-detail label{
+    color: #000;
+    font-family: 'Inter';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.section aside .third-detail label span {
+    margin-right: 20px;
+    margin-right: 10px;
+}
+
+/* Fourth detail */
+.section aside .fourth-detail .model {
+    margin-top: 41px;
+    color: #2F3035;
+    font-family:'Inter';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding-bottom: 20px;
+}
+
+.section aside .fourth-detail label {
+    color: #000;
+    font-family: 'Inter';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.section aside .fourth-detail div{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Fifth detail */
+.section aside .fifth-detail .country {
+    margin-top: 41px;
+    color: #2F3035;
+    font-family: 'Inter';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding-bottom: 20px;
+}
+
+.section aside .fifth-detail label {
+    color: #000;
+    font-family: 'Inter';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.section aside .fifth-detail div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 60px;
+    row-gap: 20px;
+}
+
+.section aside .fifth-detail div label:nth-child(3),
+.section aside .fifth-detail div label:nth-child(4){
+    padding-bottom: 20px;
+}
+
+.section aside .fifth-detail .show{
+    margin-top: 20px;
+    color: #1C62CD;
+    font-family: 'Inter';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: underline;
+}
+
+.section aside .choose{
+    margin-right: 30px;
+    margin-top: 42px;
+    border: none;
+    padding: 17px 85px 15px 85px;
+    color: #BDBEC2;
+    text-align: center;
+    font-family: SF Pro Display;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    transition: 0.4s all ease;
+}
+
+.section aside .choose:hover,
+.section aside .choose:active{
+    cursor: pointer;
+    background-color: blue;
+}
+
+
+/*Item1*/
+.section-item1 {
+    max-width: 270px;
+    border-radius: 3px;
+    border: 1px solid #CDCDCD;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.likee {
+    position: absolute;
+    top: 16px;
+    right: 19px;
+}
+
+.item1-img {
+    padding-top: 40px;
+    padding-left: 10px;
+    padding-right: 11px;
+}
+
+.section-item1-tittle {
+    padding-top: 24px;
+    color: #2F3035;
+    text-align: center;
+    font-family: 'Inter';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.section-item1-cost {
+    color: #2F3035;
+    text-align: center;
+    font-family: Barlow;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-top: 25px;
+}
+
+.section-item1-shop {
+    width: 60px;
+    border-radius: 0px 10px 0px 0px;
+    background: #1C62CD;
+    padding: 10px 16px 7.5px 14px;
+}
+
+/* Item 2*/
+
+.section-item2 {
+    border-radius: 3px;
+    border: 1px solid #CDCDCD;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.sale {
+    color: #FFF;
+    font-family: SF Pro Display;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.84px;
+    background: #1C62CD;
+    padding: 6px 15px 8px 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.likee {
+    position: absolute;
+    top: 16px;
+    right: 18px;
+}
+
+.item2-img {
+    padding-top: 51px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 22px;
+}
+
+.section-item2-tittle {
+    padding-bottom: 23px;
+    color: #2F3035;
+    text-align: center;
+    font-family: SF Pro Display;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.section-item2-cost {
+    text-align: center;
+    color: #2F3035;
+    font-family: Barlow;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.section-card .likee img:hover,
+.section-card .likee img:active {
+    transition: 0.4s all ease;
+    background-color: red;
+}
+
+.section-item2-shop {
+    width: 60px;
+    border-radius: 0px 10px 0px 0px;
+    background: #1C62CD;
+    padding: 10px 16px 7.5px 14px;
+}
+
+.item2-img:hover {
+    cursor: pointer;
+}
+
+/*Item3*/
+.section-item3 {
+    /* max-width: 270px; */
+    border-radius: 3px;
+    border: 1px solid #CDCDCD;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.likee {
+    position: absolute;
+    top: 16px;
+    right: 19px;
+}
+
+.item3-img {
+    padding-top: 51px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.section-item3-tittle {
+    padding-top: 25px;
+    padding-bottom: 24px;
+    color: #1C62CD;
+    text-align: center;
+    font-family: SF Pro Display;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.section-item3-cost {
+    text-align: center;
+    color: #1C62CD;
+    text-align: center;
+    font-family: Barlow;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.section-item3-shop {
+    width: 60px;
+    border-radius: 0px 10px 0px 0px;
+    background: #1C62CD;
+    padding: 10px 16px 7.5px 14px;
+}
+
+/*Item 4*/
+
+.section-item4 {
+    border-radius: 3px;
+    border: 1px solid #CDCDCD;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.sale {
+    color: #FFF;
+    font-family: SF Pro Display;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.84px;
+    background: #1C62CD;
+    padding: 6px 15px 8px 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.likee {
+    position: absolute;
+    top: 16px;
+    right: 18px;
+}
+
+.item4-img {
+    padding-top: 51px;
+    padding-left: 9px;
+    padding-right: 11px;
+}
+
+.section-item4-tittle {
+    padding-top: 32px;
+    padding-bottom: 7px;
+    color: #2F3035;
+    text-align: center;
+    font-family: 'Inter';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.section-item4-cost {
+    color: var(--, #2F3035);
+    text-align: center;
+    font-family: SF Pro Display;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-bottom: 33px;
+}
+
+.section-item4-error {
+    text-align: center;
+    font-family: SF Pro Display;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-bottom: 45px;
+}
+
+.section-item4-error a {
+    color: #1C62CD;
+}
+
+/*Item 5*/
+.section-item5 {
+    max-width: 270px;
+    border-radius: 3px;
+    border: 1px solid #CDCDCD;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.likee {
+    position: absolute;
+    top: 16px;
+    right: 19px;
+}
+
+.item5-img {
+    padding-top: 52px;
+    padding-left: 10px;
+    padding-right: 11px;
+}
+
+.section-item5-tittle {
+    padding-top: 24px;
+    color: #2F3035;
+    text-align: center;
+    font-family: 'Inter';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.section-item5-cost {
+    color: #2F3035;
+    text-align: center;
+    font-family: Barlow;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-top: 25px;
+    padding-bottom: 31px;
+}
+
+.section-item5-shop {
+    width: 60px;
+    border-radius: 0px 10px 0px 0px;
+    background: #1C62CD;
+    padding: 10px 16px 7.5px 14px;
+}
+
+/*Item 6*/
+.section-item6 {
+    max-width: 270px;
+    border-radius: 3px;
+    border: 1px solid #CDCDCD;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.likee {
+    position: absolute;
+    top: 16px;
+    right: 19px;
+}
+
+.item6-img {
+    padding-top: 53px;
+    padding-left: 10px;
+    padding-right: 11px;
+}
+
+.section-item6-tittle {
+    padding-top: 24px;
+    color:  #2F3035;
+    text-align: center;
+    font-family: 'Inter';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.section-item6-cost {
+    color: #2F3035;
+    text-align: center;
+    font-family: Barlow;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-top: 25px;
+    padding-bottom: 31px;
+}
+
+.section-item6-shop {
+    width: 60px;
+    border-radius: 0px 10px 0px 0px;
+    background: #1C62CD;
+    padding: 10px 16px 7.5px 14px;
+}
+
+/*Item 7*/
+.section-item7 {
+    max-width: 270px;
+    border-radius: 3px;
+    border: 1px solid #CDCDCD;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.likee {
+    position: absolute;
+    top: 16px;
+    right: 19px;
+}
+
+.item7-img {
+    padding-top: 50px;
+    padding-left: 9px;
+    padding-right: 12px;
+}
+
+.section-item7-tittle {
+    padding-top: 26px;
+    color: #2F3035;
+    text-align: center;
+    font-family: 'Inter';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.section-item7-cost {
+    color: #2F3035;
+    text-align: center;
+    font-family: Barlow;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-top: 25px;
+    padding-bottom: 31px;
+}
+
+.section-item7-shop {
+    width: 60px;
+    border-radius: 0px 10px 0px 0px;
+    background: #1C62CD;
+    padding: 10px 16px 7.5px 14px;
+}
+
+/* Item 8*/
+.section-item8 {
+    border-radius: 3px;
+    border: 1px solid #CDCDCD;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.sale {
+    color: #FFF;
+    font-family: SF Pro Display;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.84px;
+    background: #1C62CD;
+    padding: 6px 15px 8px 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.likee {
+    position: absolute;
+    top: 16px;
+    right: 18px;
+}
+
+.item8-img {
+    padding-top: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 23px;
+}
+
+.section-item8-tittle {
+    padding-bottom: 23px;
+    color: #2F3035;
+    text-align: center;
+    font-family: SF Pro Display;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.section-item8-cost {
+    padding-bottom: 31px;
+    text-align: center;
+    color: #2F3035;
+    font-family: Barlow;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.section-item8-shop {
+    width: 60px;
+    border-radius: 0px 10px 0px 0px;
+    background: #1C62CD;
+    padding: 10px 16px 7.5px 14px;
+}
+
+/*Item 9*/
+.section-item9 {
+    max-width: 270px;
+    border-radius: 3px;
+    border: 1px solid #CDCDCD;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.likee {
+    position: absolute;
+    top: 16px;
+    right: 19px;
+}
+
+.item9-img {
+    padding-top: 50px;
+    padding-left: 9px;
+    padding-right: 12px;
+}
+
+.section-item9-tittle {
+    padding-top: 26px;
+    color: #2F3035;
+    text-align: center;
+    font-family: 'Inter';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.section-item9-cost {
+    color: #2F3035;
+    text-align: center;
+    font-family: Barlow;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-top: 25px;
+    padding-bottom: 31px;
+}
+
+.section-item9-shop {
+    width: 60px;
+    border-radius: 0px 10px 0px 0px;
+    background: #1C62CD;
+    padding: 10px 16px 7.5px 14px;
+}
+
+
+/*footer*/
+
+.about-discounts {
+    background-color: #1C62CD;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.about-discounts-picture1 {
+    padding-left: 71px;
+    padding-top: 33px;
+    padding-bottom: 16px;
+}
+
+.about-discounts-tittle {
+    padding-left: 46px;
+    padding-right: 31px;
+    color: #FFF;
+    font-family: SF Pro Display;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px;
+}
+
+.about-discounts-show span {
+    padding: 3px 41px 4px 41px;
+    color: #2F3035;
+    font-family: SF Pro Display;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 50px;
+}
+
+.footer-end {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    background-color: #F0F0F4;
+    gap: 100px;
+    margin-top: 42px;
+}
+
+.footer-end1 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 85px;
+}
+
+.footer-end1-subscribe {
+    color: #2F3035;
+    font-family: SF Pro Display;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-bottom: 34px;
+}
+
+.footer-end1-input {
+    max-width: 200px;
+    /*a*/
+    padding: 8px 50px 8px 12px;
+}
+
+.footer-end1-submit {
+    background-color: #1C62CD;
+    border: 0;
+    padding: 10px 16px 9px 16px;
+}
+
+.footer-end1-submit span {
+    color: #FFF;
+    text-align: center;
+    font-family: SF Pro Display;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 1.32px;
+    text-transform: uppercase;
+}
+
+.footer-info ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-info ul li a {
+    text-decoration: none;
+    color: #2F3035;
+    font-family: SF Pro Display;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.footer-info ul li a:hover {
+    color: #2F3035;
+    font-family: SF Pro Display;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.footer-info2 ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-info2 ul li a {
+    text-decoration: none;
+    color: #2F3035;
+    font-family: SF Pro Display;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.footer-info2 ul li a:hover {
+    color: #2F3035;
+    font-family: SF Pro Display;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.footer-social-media ul {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 37px;
+}

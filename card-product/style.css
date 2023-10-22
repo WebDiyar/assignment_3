@@ -1,0 +1,366 @@
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+/* Nav */
+/* .heading-nav {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    
+} */
+
+
+#heading-nav ul {
+    display: flex;
+    gap: 15px;
+}
+
+#header {
+    font-family: 'Inter';
+}
+
+.container {
+    /* color: #2F3035; */
+    /* font-family: 'Inter'; */
+    /* font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration: none;
+    list-style: none; */
+    
+}
+
+
+.container #logo-tittle {
+    /* color: #2F3035; */
+    /* font-family: 'Inter'; */
+    /* font-size: 20px; */
+    /* font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-transform: capitalize; */
+}
+
+.container #logo-address {
+    /* color: #2F3035; */
+    /* font-family: 'Inter'; */
+    /* font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal; */
+}
+
+#header2 {
+    font-family: 'Inter';
+    padding-top: 15px;
+    padding-bottom: 13px;
+    background: #F0F0F4;
+}
+
+/* .container .nav ol {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 13px;
+    background: #F0F0F4;
+} */
+
+#header2 ol li a {
+    text-decoration: none;
+    color: #2F3035;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+    transition: 0.4s all ease;
+    position: relative;
+    padding-bottom: 14px;
+}
+
+#header2 ol li a:hover,
+.container .nav ol li a:active {
+    font-weight: 600;
+}
+
+#header2 ol li a:hover::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: #1C62CD;
+}
+
+#header2 ul {
+    margin-top: 46px;
+    margin-bottom: 41px;
+    display: flex;
+    gap: 10px;
+}
+
+#header2 ul li a {
+    text-decoration: none;
+    color: #C4C4C4;
+    font-family: 'Inter';
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* .container .product-info{
+    display: block;
+} */
+
+/* Item*/
+
+#sale {
+    color: #FFF;
+    font-family: 'Inter';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.84px;
+    background: #1C62CD;
+    padding: 6px 15px 8px 15px;
+    top: 0;
+    left: 0;
+}
+
+#item-cost-no {
+    text-align: center;
+    opacity: 0.6;
+    color: #000;
+    font-family: Barlow;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    text-decoration: line-through;
+    padding-top: 6px;
+}
+
+#item-cost {
+    color: #2F3035;
+    font-family: Barlow;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+    padding-bottom: 17px;
+}
+
+#cheap{
+    font-family: 'Inter';
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+}
+
+#cheap a{
+    color: #1C62CD;
+    text-decoration: none;
+}
+
+/* Table */
+
+/* table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    font-family: 'Inter';
+} */
+
+/* th {
+    background-color: #f2f2f2;
+} */
+
+
+
+
+/* @media all and (max-width: 500px) {
+    body {
+        background-color: green;
+    }
+    .abc {
+        color: red;
+    }
+} */
+
+/* table tr:hover {
+    background-color: #f5f5f5;
+} */
+
+/* .section-table{
+    
+} */
+#section {
+    font-family: 'Inter';
+    margin-top: 100px;
+}
+
+
+#section table td button{
+    border: 0px;
+    padding: 10px 20px;
+    color: white;
+    background-color: blue;
+}
+
+
+/*footer*/
+
+/* .about-discounts {
+    background-color: #1C62CD;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.about-discounts-picture1 {
+    padding-left: 71px;
+    padding-top: 33px;
+    padding-bottom: 16px;
+}
+
+.about-discounts-tittle {
+    padding-left: 46px;
+    padding-right: 31px;
+    color: #FFF;
+    font-family: SF Pro Display;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px;
+}
+
+.about-discounts-show span {
+    padding: 3px 41px 4px 41px;
+    color: #2F3035;
+    font-family: SF Pro Display;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 50px;
+} */
+
+#footer-end {
+    background-color: #F0F0F4;
+    gap: 100px;
+    margin-top: 42px;
+}
+
+#footer-end1 {
+    margin-bottom: 85px;
+}
+
+.footer-subscribe {
+    color: #2F3035;
+    font-family: 'Inter';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-bottom: 34px;
+}
+
+.footer-end1-input {
+    max-width: 200px;
+    padding: 8px 50px 8px 12px;
+}
+
+.footer-end1-submit {
+    background-color: #1C62CD;
+    border: 0;
+    padding: 10px 16px 9px 16px;
+}
+
+.footer-end1-submit span {
+    color: #FFF;
+    text-align: center;
+    font-family: 'Inter';
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 1.32px;
+    text-transform: uppercase;
+}
+
+.footer-info ul {
+    gap: 10px;
+}
+
+.footer-info ul li a {
+    text-decoration: none;
+    color: #2F3035;
+    font-family: 'Inter';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.footer-info ul li a:hover {
+    color: #2F3035;
+    font-family: 'Inter';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.footer-info2 ul {
+    gap: 10px;
+}
+
+.footer-info2 ul li a {
+    text-decoration: none;
+    color: #2F3035;
+    font-family: 'Inter';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.footer-info2 ul li a:hover {
+    color: #2F3035;
+    font-family: 'Inter';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.footer-social-media ul {
+    gap: 30px;
+}
+
+
+@media (max-width: 711) {
+    .form-control{
+        padding: 6px 12px 7px 13px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    #heading-nav{
+        row-gap: 20px;
+    }
+
+    .footer-social-media{
+        margin-top: 0px;
+    }
+}

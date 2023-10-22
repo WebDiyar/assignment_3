@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="shortcut icon" href="card-product/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="form_validation.css">
+    <script src="form_validation.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <form id="myForm" class="form">
+                <h1 style="text-align: center; ">Акции! Акции! Акции!</h1>
+                <div class="input-container">
+                    <label for="firstName">Введите своё имя:</label>
+                    <input type="text" id="firstName" class="input-field" required pattern="[А-Яа-яЁё]+">
+                    <div class="error" id="firstNameError"></div>
+                </div>
+                <div class="input-container">
+                    <label for="lastName">Введите своё фамилию:</label>
+                    <input type="text" id="lastName" class="input-field" required pattern="[А-Яа-яЁё]+">
+                    <div class="error" id="lastNameError"></div>
+                </div>
+                <div class="input-container">
+                    <label for="gender">Пол:</label>
+                    <select id="gender" class="input-field" required>
+                        <option value="" disabled selected>Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                    <div class="error" id="genderError"></div>
+                </div>
+                <div class="input-container">
+                    <label for="email">Электронная почта:</label>
+                    <input type="email" id="email" class="input-field" required>
+                    <div class="error" id="emailError"></div>
+                </div>
+                <div class="input-container">
+                    <label for="message">Сообщение для нашей компании:</label>
+                    <textarea id="message" class="input-field" required></textarea>
+                    <div class="error" id="messageError"></div>
+                </div>
+                <button type="button" id="submitButton" onclick="validateForm()">Send</button>
+            </form>
+        </div>
+    </header>
+</body>
+
+</html>
