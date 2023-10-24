@@ -12,6 +12,31 @@
     
 } */
 
+/* Add this CSS to control the layout on mobile screens */
+@media (max-width: 768px) {
+    .flex-sm-column {
+        flex-direction: column;
+    }
+
+    .d-sm-flex {
+        display: flex;
+    }
+
+    .d-md-flex {
+        display: block;
+    }
+
+    .flex-md-nowrap {
+        flex-wrap: nowrap;
+    }
+
+    .d-sm-flex > div {
+        order: 0; /* Reset the order to maintain the same order */
+    }
+}
+
+/* Additional CSS for other screens */
+
 
 #heading-nav ul {
     display: flex;

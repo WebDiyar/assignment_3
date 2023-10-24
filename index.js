@@ -19,25 +19,20 @@ function updateCountdown() {
 
 function about() {
     let str = 'Компания "DRIVE MOTO" - это организация, специализирующаяся на предоставлении услуг в сфере разных транспортов' +
-        ' и мотоциклетного оборудования в различных городах России. Основанная с целью удовлетворения потребностей клиентов,' +
-        ' "DRIVE MOTO" предлагает широкий ассортимент услуг и продуктов для множества видов техник.'
+    ' и мотоциклетного оборудования в различных городах России. Основанная с целью удовлетворения потребностей клиентов,' +
+    ' "DRIVE MOTO" предлагает широкий ассортимент услуг и продуктов для множества видов техник.'
     let nothing = 'Эта страница еще не доступна :(';
 
-    document.getElementsByClassName('about')[0].addEventListener('click', function () {
-        alert(nothing);
-    });
-    document.getElementsByClassName('about')[1].addEventListener('click', function () {
-        alert(nothing);
-    });
-    document.getElementsByClassName('about')[2].addEventListener('click', function () {
-        alert(nothing);
-    });
-    document.getElementsByClassName('about')[3].addEventListener('click', function () {
-        alert(str);
-    });
-    document.getElementsByClassName('about')[4].addEventListener('click', function () {
-        alert(str);
-    });
+    const aboutElements = document.getElementsByClassName('about');
+    for (let i = 0; i < aboutElements.length; i++) {
+        aboutElements[i].addEventListener('click', function() {
+            if (i < 3) {
+                alert(nothing);
+            } else {
+                alert(str);
+            }
+        });
+    }
 }
 
 function contact() {
@@ -132,15 +127,35 @@ const heart1 = document.getElementById('heart1');
 const heart2 = document.getElementById('heart2');
 const heart3 = document.getElementById('heart3');
 heart.addEventListener('click', function () {
-    heart.style.background = 'red';
+    if (heart.style.background == 'red') {
+        heart.style.background = 'none';
+    }
+    else {
+        heart.style.background = 'red'
+    }
 });
 
 heart1.addEventListener('click', function () {
-    heart1.style.background = 'red';
+    if (heart1.style.background == 'red') {
+        heart1.style.background = 'none';
+    }
+    else {
+        heart1.style.background = 'red'
+    }
 });
 heart2.addEventListener('click', function () {
-    heart2.style.background = 'red';
+    if (heart2.style.background == 'red') {
+        heart2.style.background = 'none';
+    }
+    else {
+        heart2.style.background = 'red'
+    }
 });
 heart3.addEventListener('click', function () {
-    heart3.style.background = 'red';
+    if (heart3.style.background == 'red') {
+        heart3.style.background = 'none';
+    }
+    else {
+        heart3.style.background = 'red'
+    }
 });
