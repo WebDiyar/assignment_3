@@ -20,37 +20,37 @@ function validateForm() {
     // Validate First Name
     if (!isNotEmpty(firstName.value)) {
         valid = false;
-        displayError("firstNameError", "First Name is required");
+        displayError("firstNameError", "Имя обязательна");
     }
 
 
     // Validate Last Name
     if (!isNotEmpty(lastName.value)) {
         valid = false;
-        displayError("lastNameError", "Last Name is required");
+        displayError("lastNameError", "Фамилия обязательна");
     }
 
     // Validate Gender
     if (gender.value === "") {
         valid = false;
-        displayError("genderError", "Please select a gender");
+        displayError("genderError", "Пожалуйста, выберите пол");
     }
 
     // Validate Email
     if (!isValidEmail(email.value)) {
         valid = false;
-        displayError("emailError", "Invalid Email");
+        displayError("emailError", "Неверный адрес электронной почты");
     }
 
     // Validate Message
-    if (!isNotEmpty(message.value)) {
-        valid = false;
-        displayError("messageError", "Message is required");
-    }
+    // if (!isNotEmpty(message.value)) {
+    //     valid = false;
+    //     displayError("messageError", "Сообщение обязательно");
+    // }
 
     // Display success message and clear the form if valid
     if (valid) {
-        alert("Ссылка отправлена на вашу почту!");
+        alert("Спасибо! Мы уведомим вас о предстоящих акциях.");
         document.getElementById("myForm").reset();
     }
 }

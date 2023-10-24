@@ -17,6 +17,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../reset.css">
+    <script defer src="../../index.js"></script>
     <style>
         html,
         body {
@@ -33,7 +34,7 @@
 </head>
 
 <body style="overflow-x: hidden;">
-    <header id="header" class="header px-3 mt-4">
+    <header id="header" class="header px-3 mt-4 mb-3">
         <div class="container">
             <div class="row d-sm-flex flex-sm-column row-gap-sm-2">
                 <div class="col-xl-12 p-0">
@@ -41,11 +42,10 @@
                         <span class="d-none d-lg-block">
                             <ul class="navbar-nav fs-5 fw-bold">
                                 <li class="nav-item d-none d-lg-block"><a class="nav-link text-black"
-                                        href="#">Магазин</a></li>
-                                <li class="nav-item d-none d-lg-block"><a class="nav-link text-black" href="#">Акции</a>
+                                        href="../../index.html">Магазин</a></li>
+                                <li class="nav-item d-none d-lg-block"><a class="nav-link text-black" href="../../form_validation/form_validation.html">Акции</a>
                                 </li>
-                                <li class="nav-item d-none d-lg-block"><a class="nav-link text-black" href="#">Доставка
-                                        и оплата</a></li>
+                                <li class="about nav-item d-none d-lg-block"><a class="nav-link text-black" href="">Доставка и оплата</a></li>
                             </ul>
                         </span>
 
@@ -56,10 +56,10 @@
                         </span>
                         <a href="https://maps.app.goo.gl/aKzD6gw7uprQ6MXC9" style="text-decoration: none;"><span class="address fs-5 fw-bold text-black" id="logo-address">Москва, ул. Пушкина 21</span></a>
                         <span>
-                            <div class="nav-img">
-                                <img src="../img/header/like-nav.svg" alt="like-img">
-                                <img src="../img/header/human-nav.svg" alt="human-img">
-                                <img src="../img/header/shop-nav.svg" alt="shop-img">
+                            <div class="about nav-img">
+                                <img src="../../card-product/img/header/like-nav.svg" alt="like-img">
+                                <img src="../../card-product/img/header/human-nav.svg" alt="human-img">
+                                <img src="../../card-product/img/header/shop-nav.svg" alt="shop-img">
                             </div>
                         </span>
                     </nav>
@@ -72,15 +72,15 @@
                     <hr>
                     <nav id="header2" class="navbar navbar-expand-lg d-flex justify-content-between align-items-center">
                         <ol class="navbar-nav d-flex justify-content-between w-100">
-                            <li class="nav-item d-lg-none"><a class="nav-link" href="#">Магазин</a></li>
-                            <li class="nav-item d-lg-none"><a class="nav-link" href="#">Акции</a></li>
-                            <li class="nav-item d-lg-none"><a class="nav-link" href="#">Доставка и оплата</a></li>
+                            <li class="nav-item d-lg-none"><a class="nav-link" href="../../index.html">Магазин</a></li>
+                            <li class="nav-item d-lg-none"><a class="nav-link" href="../../form_validation/form_validation.html">Акции</a></li>
+                            <li class="about nav-item d-lg-none"><a class="nav-link" href="#">Доставка и оплата</a></li>
                             <li class="nav-item"><a class="nav-link" href="../../catalog/quadbike/catalog.html">Квадроциклы</a></li>
-                            <li class="nav-item"><a class="nav-link" href="../../catalog/boat/catalog.html">Катера</a></li>
                             <li class="nav-item"><a class="nav-link" href="../../catalog/jetski/catalog.html">Гидроциклы</a></li>
-                            <li class="nav-item"><a class="nav-link" href="../../catalog/allvehicle/catalog.html">Вездеходы</a></li>
-                            <li class="nav-item"><a class="nav-link" href="../../catalog/snowmobile/catalog.html">Снегоходы</a></li>
-                            <li class="nav-item"><a class="nav-link" href="../../catalog/engine/catalog.html">Двигатели</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../../catalog/empty/catalog.html">Катера</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../../catalog/empty/catalog.html">Вездеходы</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../../catalog/empty/catalog.html">Снегоходы</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../../catalog/empty/catalog.html">Двигатели</a></li>
                         </ol>
                     </nav>
                     <nav class="navbar navbar-expand-lg">
@@ -112,7 +112,7 @@
                             1 543 000 ₽
                         </span>
 
-                        <span id="cheap"><a href="#">Нашли дешевле? Снизим цену!</a></span>
+                        <span id="cheap"><a href="../../form_validation/form_validation.html">Нашли дешевле? Снизим цену!</a></span>
                     </div>
                 </div>
             </div>
@@ -139,7 +139,7 @@
                                         <td class="table-responsive-md">пн-сб: 8.00-19.00 <br> вс: 9.00-17.00</td>
                                         <td class="table-responsive-md">В наличии</td>
                                         <td class="table-responsive-md">1</td>
-                                        <td class="table-responsive-md"><button type="button">Купить</button></td>
+                                        <td class="table-responsive-md"><button type="button"><a href="/credit_card/credit_card.html" style="color: white; text-decoration: none;">Купить</a></button></td>
                                     </tr>
 
                                     <tr class="border-bottom border-1">
@@ -147,7 +147,7 @@
                                         <td class="table-responsive-md">пн-сб: 8.00-19.00 <br> вс: 9.00-17.00</td>
                                         <td class="table-responsive-md">В наличии</td>
                                         <td class="table-responsive-md">2</td>
-                                        <td class="table-responsive-md"><button type="button">Купить</button></td>
+                                        <td class="table-responsive-md"><button type="button"><a href="/credit_card/credit_card.html" style="color: white; text-decoration: none;">Купить</a></button></td>
                                     </tr>
 
                                     <tr class="border-bottom border-1">
@@ -155,7 +155,7 @@
                                         <td class="table-responsive-md">пн-сб: 8.00-19.00 <br> вс: 9.00-17.00</td>
                                         <td class="table-responsive-md">В наличии</td>
                                         <td class="table-responsive-md">2</td>
-                                        <td class="table-responsive-md"><button type="button">Купить</button></td>
+                                        <td class="table-responsive-md"><button type="button"><a href="/credit_card/credit_card.html" style="color: white; text-decoration: none;">Купить</a></button></td>
                                     </tr>
 
                                     <tr class="border-bottom border-1">
@@ -163,7 +163,7 @@
                                         <td class="table-responsive-md">пн-сб: 8.00-19.00 <br> вс: 9.00-17.00</td>
                                         <td class="table-responsive-md">В наличии</td>
                                         <td class="table-responsive-md">10</td>
-                                        <td class="table-responsive-md"><button type="button">Купить</button></td>
+                                        <td class="table-responsive-md"><button type="button"><a href="/credit_card/credit_card.html" style="color: white; text-decoration: none;">Купить</a></button></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -184,49 +184,40 @@
                             быстрее</span>
                         <form class="email mt-2" action="">
                             <div class="input-group">
-                                <input type="text" placeholder="Введите ваш e-mail" class="form-control"
-                                    name="email-text" required>
+                                <input id="email" type="email" placeholder="Введите ваш e-mail" class="form-control" name="email-text" required>
+                                <!-- <input type="email" id="email" class="input-field" required> -->
                                 <div class="input-group-append">
-                                    <button type="submit" class="btn btn-primary">Отправить</button>
+                                    <button type="button" id="submitButton" class="btn btn-primary " onclick="validateForm()">Отправить</button>
                                 </div>
+                                <div class="error" id="emailError" style="font-size: 13px;margin-top: 2px;"></div>
                             </div>
                         </form>
                     </div>
                 </div>
 
-                <div class="col-md-6 col-lg-3">
-                    <div class="footer-info d-lg-flex justify-content-center">
-                        <ul class="list-unstyled">
-                            <li><a href=" #">Информация</a></li>
-                            <li class="mt-2"><a href="#">О компании</a></li>
-                            <li class="mt-2"><a href="#">Контакты</a></li>
-                            <li class="mt-2"><a href="#">Акции</a></li>
-                            <li class="mt-2"><a href="#">Магазины</a></li>
+                <div class="col-md-6 col-lg-6">
+                    <div class="footer-info d-lg-flex justify-content-center flex-lg-row flex-md-column">
+                        <ul class="list-unstyled d-lg-flex flex-lg-row justify-content-center align-items-center align-content-center">
+                            <li class="about"><a href="#footer-end">Информация</a></li>
+                            <li class="about mt-md-2 mt-lg-0"><a href="#footer-end">О компании</a></li>
+                            <li id="contact" class="mt-md-2 mt-lg-0"><a href="#footer-end">Контакты</a></li>
+                            <li class="mt-md-2 mt-lg-0" ><a href="../../form_validation/form_validation.html">Акции</a></li>
+                            <li id="store" class="mt-md-2 mt-lg-0"><a href="#footer-end">Магазины</a></li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="col-md-6 col-lg-3">
-                    <div class="footer-info2 d-lg-flex justify-content-center">
-                        <ul class="list-unstyled ">
-                            <li class="mt-2"><a href="#">Интернет-магазин</a></li>
-                            <li class="mt-2"><a href="#">Доставка и самовывоз</a></li>
-                            <li class="mt-2"><a href="#">Оплата</a></li>
-                            <li class="mt-2"><a href="#">Возврат-обмен</a></li>
-                            <li class="mt-2"><a href="#">Новости</a></li>
-                        </ul>
-                    </div>
-                </div>
+
 
                 <div class="col-md-6 col-lg-3">
                     <div class="footer-social-media d-lg-flex justify-content-center">
                         <ul class="list-inline">
-                            <li class="list-inline-item"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a>
+                            <li class="list-inline-item"><a href="https://www.instagram.com/leomessi/"><svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a>
                             </li>
-                            <li class="list-inline-item"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M31.4907 63.4907C0 94.9813 0 145.671 0 247.04V264.96C0 366.329 0 417.019 31.4907 448.509C62.9813 480 113.671 480 215.04 480H232.96C334.329 480 385.019 480 416.509 448.509C448 417.019 448 366.329 448 264.96V247.04C448 145.671 448 94.9813 416.509 63.4907C385.019 32 334.329 32 232.96 32H215.04C113.671 32 62.9813 32 31.4907 63.4907ZM75.6 168.267H126.747C128.427 253.76 166.133 289.973 196 297.44V168.267H244.16V242C273.653 238.827 304.64 205.227 315.093 168.267H363.253C359.313 187.435 351.46 205.583 340.186 221.579C328.913 237.574 314.461 251.071 297.733 261.227C316.41 270.499 332.907 283.63 346.132 299.751C359.357 315.873 369.01 334.618 374.453 354.747H321.44C316.555 337.262 306.614 321.61 292.865 309.754C279.117 297.899 262.173 290.368 244.16 288.107V354.747H238.373C136.267 354.747 78.0267 284.747 75.6 168.267Z"/></svg></a>
+                            <li class="list-inline-item"><a href="https://vk.com/durov"><svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M31.4907 63.4907C0 94.9813 0 145.671 0 247.04V264.96C0 366.329 0 417.019 31.4907 448.509C62.9813 480 113.671 480 215.04 480H232.96C334.329 480 385.019 480 416.509 448.509C448 417.019 448 366.329 448 264.96V247.04C448 145.671 448 94.9813 416.509 63.4907C385.019 32 334.329 32 232.96 32H215.04C113.671 32 62.9813 32 31.4907 63.4907ZM75.6 168.267H126.747C128.427 253.76 166.133 289.973 196 297.44V168.267H244.16V242C273.653 238.827 304.64 205.227 315.093 168.267H363.253C359.313 187.435 351.46 205.583 340.186 221.579C328.913 237.574 314.461 251.071 297.733 261.227C316.41 270.499 332.907 283.63 346.132 299.751C359.357 315.873 369.01 334.618 374.453 354.747H321.44C316.555 337.262 306.614 321.61 292.865 309.754C279.117 297.899 262.173 290.368 244.16 288.107V354.747H238.373C136.267 354.747 78.0267 284.747 75.6 168.267Z"/></svg></a>
                             </li>
-                            <li class="list-inline-item"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg></a></li>
-                            <li class="list-inline-item"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg></a></li>
+                            <li class="list-inline-item"><a href="https://www.facebook.com/zuck/?locale=ru_RU"><svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg></a></li>
+                            <li class="list-inline-item"><a href="https://www.youtube.com/c/AstanaITUniversity"><svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg></a></li>
                         </ul>
                     </div>
                 </div>
