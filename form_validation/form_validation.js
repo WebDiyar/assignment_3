@@ -1,4 +1,5 @@
-function validateForm() {
+function validateForm(event) {
+    event.preventDefault();
     resetForm();
 
     const firstName = document.getElementById("firstName");
@@ -12,43 +13,48 @@ function validateForm() {
         return value.trim() !== '';
     }
 
+    function isValidName(name) {
+        //Russian, English or Kazakh letters 
+        const namePattern = /^[А-Яа-яA-Za-zҚқҢңҒғІіІі]*$/;
+        return namePattern.test(name);
+    }
+
     function isValidEmail(email) {
-        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+        //email requirements 
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@(mail\.ru)$/;
         return emailPattern.test(email);
     }
 
-    // Validate First Name
-    if (!isNotEmpty(firstName.value)) {
+    //First Name 
+    if (!isNotEmpty(firstName.value) || firstName.value.length < 3 || !isValidName(firstName.value)) {
         valid = false;
-        displayError("firstNameError", "Имя обязательна");
+        displayError("firstNameError", "Имя должно быть не менее 3 букв и содержать только буквы");
     }
 
-
-    // Validate Last Name
-    if (!isNotEmpty(lastName.value)) {
+    //Last Name 
+    if (!isNotEmpty(lastName.value) || lastName.value.length < 3 || !isValidName(lastName.value)) {
         valid = false;
-        displayError("lastNameError", "Фамилия обязательна");
+        displayError("lastNameError", "Фамилия должна быть не менее 3 букв и содержать только буквы");
     }
 
-    // Validate Gender
+    //Gender 
     if (gender.value === "") {
         valid = false;
         displayError("genderError", "Пожалуйста, выберите пол");
     }
 
-    // Validate Email
-    if (!isValidEmail(email.value)) {
+    //Email 
+    if (!isValidEmail(email.value) || !isNotEmpty(email.value)) {
         valid = false;
-        displayError("emailError", "Неверный адрес электронной почты");
+        displayError("emailError", "Введите правильный адрес электронной почты (mail.ru).");
     }
 
-    // Validate Message
-    // if (!isNotEmpty(message.value)) {
-    //     valid = false;
-    //     displayError("messageError", "Сообщение обязательно");
-    // }
+    //Message 
+    if (!isNotEmpty(message.value)) {
+        valid = false;
+        displayError("messageError", "Сообщение обязательно");
+    }
 
-    // Display success message and clear the form if valid
     if (valid) {
         alert("Спасибо! Мы уведомим вас о предстоящих акциях.");
         document.getElementById("myForm").reset();

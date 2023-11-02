@@ -7,7 +7,8 @@
     <title>Registration</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&family=Krona+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&family=Krona+One&display=swap"
+        rel="stylesheet">
     <link rel="shortcut icon" href="../card-product/img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="form_validation.css">
     <script src="form_validation.js"></script>
@@ -17,16 +18,16 @@
     <header>
         <div class="container">
             <form id="myForm" class="form">
-                <h1 style="text-align: center; ">Регистрация</h1>
+                <h1 style="text-align: center;">Регистрация</h1>
                 <p style="text-align: center; color: gray;">Оставьте нам свои контакты, чтобы мы связались с вами</p>
                 <div class="input-container">
                     <label for="firstName">*Введите своё имя:</label>
-                    <input type="text" id="firstName" class="input-field" required pattern="[А-Яа-яЁё]+">
+                    <input type="text" id="firstName" class="input-field" required>
                     <div class="error" id="firstNameError"></div>
                 </div>
                 <div class="input-container">
                     <label for="lastName">*Введите своё фамилию:</label>
-                    <input type="text" id="lastName" class="input-field" required pattern="[А-Яа-яЁё]+">
+                    <input type="text" id="lastName" class="input-field" required>
                     <div class="error" id="lastNameError"></div>
                 </div>
                 <div class="input-container">
@@ -48,9 +49,8 @@
                     <textarea id="message" class="input-field" required></textarea>
                     <div class="error" id="messageError"></div>
                 </div>
-                <button type="button" id="submitButton" onclick="validateForm()">Отправить</button>
+                <button type="button" id="submitButton" onclick="validateForm(event);">Отправить</button>
             </form>
-        </div>
     </header>
 </body>
 
