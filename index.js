@@ -1,5 +1,5 @@
 function updateCountdown() {
-    const targetDate = new Date('2023-10-31T00:00:00'); //(10/31/2023)
+    const targetDate = new Date('2023-11-20T00:00:00'); //(10/31/2023)
     const currentDate = new Date();
     const timeDifference = targetDate - currentDate;
     if (timeDifference < 0) {
@@ -122,40 +122,40 @@ slider();
 
 
 
-const heart = document.getElementById('heart');
-const heart1 = document.getElementById('heart1');
-const heart2 = document.getElementById('heart2');
-const heart3 = document.getElementById('heart3');
-heart.addEventListener('click', function () {
-    if (heart.style.background == 'red') {
-        heart.style.background = 'none';
-    }
-    else {
-        heart.style.background = 'red'
-    }
-});
+// const heart = document.getElementById('heart');
+// const heart1 = document.getElementById('heart1');
+// const heart2 = document.getElementById('heart2');
+// const heart3 = document.getElementById('heart3');
+// heart.addEventListener('click', function () {
+//     if (heart.style.background == 'red') {
+//         heart.style.background = 'none';
+//     }
+//     else {
+//         heart.style.background = 'red'
+//     }
+// });
 
-heart1.addEventListener('click', function () {
-    if (heart1.style.background == 'red') {
-        heart1.style.background = 'none';
-    }
-    else {
-        heart1.style.background = 'red'
-    }
-});
-heart2.addEventListener('click', function () {
-    if (heart2.style.background == 'red') {
-        heart2.style.background = 'none';
-    }
-    else {
-        heart2.style.background = 'red'
-    }
-});
-heart3.addEventListener('click', function () {
-    if (heart3.style.background == 'red') {
-        heart3.style.background = 'none';
-    }
-    else {
-        heart3.style.background = 'red'
-    }
-});
+// heart1.addEventListener('click', function () {
+//     if (heart1.style.background == 'red') {
+//         heart1.style.background = 'none';
+//     }
+//     else {
+//         heart1.style.background = 'red'
+//     }
+// });
+// heart2.addEventListener('click', function () {
+//     if (heart2.style.background == 'red') {
+//         heart2.style.background = 'none';
+//     }
+//     else {
+//         heart2.style.background = 'red'
+//     }
+// });
+// heart3.addEventListener('click', function () {
+//     if (heart3.style.background == 'red') {
+//         heart3.style.background = 'none';
+//     }
+//     else {
+//         heart3.style.background = 'red'
+//     }
+// });

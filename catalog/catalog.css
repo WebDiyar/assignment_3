@@ -2,7 +2,9 @@
     max-width: 1170px;
     margin: 0 auto;
 }
-
+#rubl {
+    font-family: 'Inter';
+}
 /* Nav */
 .heading-nav {
     display: flex;
