@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Authorization</title>
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Font-->
+	<link rel="shortcut icon" href="../card-product/img/favicon.png" type="image/x-icon">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&family=Krona+One&display=swap"
+        rel="stylesheet">
+	<!-- Main Style Css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css"/>
+	<script defer src="main.js"></script>
+	
+	
+</head>
+<body class="form-v8">
+    <div class="page-content">
+        <div class="form-v8-content">
+            <div class="form-right">
+                <div class="tab">
+                    <div class="tab-inner">
+                        <button class="tablinks" onclick="openCity(event, 'sign-up')" id="defaultOpen">Регистрация</button>
+                    </div>
+                    <div class="tab-inner">
+                        <button class="tablinks" onclick="openCity(event, 'sign-in')">Вход</button>
+                    </div>
+                </div>
+                <form id="myForm" class="form-detail" action="#" method="post">
+                    <div class="tabcontent" id="sign-up">
+                        <div class="form-row">
+                            <label class="form-row-inner">
+                                <input type="text" name="full_name" id="full_name" class="input-text mt-2" required>
+                                <span class="label">Имя</span>
+                                <div class="error" id="full_nameError"></div>
+                                <span class="border"></span>
+                            </label>
+                        </div>
+                        <div class="form-row">
+                            <label class="form-row-inner">
+                                <input type="text" name="your_email" id="your_email" class="input-text mt-2" required>
+                                <span class="label">Электронная почта</span>
+                                <div class="error" id="your_emailError"></div>
+                                <span class="border"></span>
+                            </label>
+                        </div>
+                        <div class="form-row">
+                            <label class="form-row-inner">
+                                <input type="password" name="password" id="password" class="input-text mt-2" required>
+                                <span class="label">Пароль</span>
+                                <div class="error" id="passwordError"></div>
+                                <span class="border"></span>
+                            </label>
+                        </div>
+                        <div class="form-row">
+                            <label class="form-row-inner">
+                                <input type="password" name="confirm_password" id="confirm_password" class="input-text mt-2" required>
+                                <span class="label">Подтвердите пароль</span>
+                                <div class="error" id="confirm_passwordError"></div>
+                                <span class="border"></span>
+                            </label>
+                        </div>
+                        <div class="form-row-last">
+                            <button type="button" class="register" onclick="registerUser()">Зарегистрироватся</button>
+                        </div>
+                    </div>
+                </form>
+                <form class="form-detail" action="#" method="post">
+                    <div class="tabcontent" id="sign-in">
+                        <div class="form-row">
+                            <label class="form-row-inner">
+                                <input type="text" name="username" id="username" class="input-text" required>
+                                <span class="label">Имя</span>
+                                <div class="error" id="usernameError"></div>
+                                <span class="border"></span>
+                            </label>
+                        </div>
+                        <div class="form-row">
+                            <label class="form-row-inner">
+                                <input type="password" name="password_1" id="password_1" class="input-text" required>
+                                <span class="label">Пароль</span>
+                                <div class="error" id="password_1Error"></div>
+                                <span class="border"></span>
+                            </label>
+                        </div>
+                        <div class="form-row-last">
+                            <button type="button" class="register" onclick="loginUser()">Войти</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
