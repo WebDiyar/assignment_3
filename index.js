@@ -19,11 +19,11 @@ function updateCountdown() {
 
 function about() {
     let str = 'Компания "DRIVE MOTO" - это организация, специализирующаяся на предоставлении услуг в сфере разных транспортов' +
-    ' и мотоциклетного оборудования в различных городах России. Основанная с целью удовлетворения потребностей клиентов,' +
-    ' "DRIVE MOTO" предлагает широкий ассортимент услуг и продуктов для множества видов техник.'
+        ' и мотоциклетного оборудования в различных городах России. Основанная с целью удовлетворения потребностей клиентов,' +
+        ' "DRIVE MOTO" предлагает широкий ассортимент услуг и продуктов для множества видов техник.'
     const aboutElements = document.getElementsByClassName('about');
     for (let i = 0; i < aboutElements.length; i++) {
-        aboutElements[i].addEventListener('click', function() {
+        aboutElements[i].addEventListener('click', function () {
             if (i < 3) {
                 window.location.href = "catalog/addToBasket/addToBasket.html";
             } else {
