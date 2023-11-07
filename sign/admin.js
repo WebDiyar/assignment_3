@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function() {
             usernameInput.value = "";
             emailInput.value = "";
             passwordInput.value = "";
-            $('#editUserModal').modal('hide');
+            $('#addUserModal').modal('hide');
         } else {
             alert("Please fill in all fields.");
         }
