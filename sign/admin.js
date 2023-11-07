@@ -24,12 +24,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 // Create a new row for each item
                 const tableRow = userTableBody.insertRow();
                 tableRow.innerHTML = `
-                    <td>${key}</td>
                     <td>${value.name}</td>
                     <td>${value.email}</td>
                     <td>${value.password}</td>
                     <td>
-                        <button class="edit-button" data-key="${key}">Edit</button>
+                        <button class="edit-button" data-key="${key}" data-toggle="modal" data-target="#editUserModal">Edit</button>
                         <button class="delete-button" data-key="${key}">Delete</button>
                     </td>
                 `;
@@ -37,12 +36,59 @@ document.addEventListener("DOMContentLoaded", function() {
                 const editButton = tableRow.querySelector(".edit-button");
                 const deleteButton = tableRow.querySelector(".delete-button");
 
-                // Add event listeners for edit and delete buttons
                 editButton.addEventListener("click", function() {
                     const key = this.getAttribute("data-key");
-                    
-                });
                 
+                    // Retrieve the user data associated with the key
+                    const value = JSON.parse(localStorage.getItem(key));
+                
+                    // Pre-fill the edit form fields with the user's data
+                    const editUsernameInput = document.getElementById("editUsername");
+                    const editEmailInput = document.getElementById("editEmail");
+                    const editPasswordInput = document.getElementById("editPassword");
+                
+                    editUsernameInput.value = key;
+                    editEmailInput.value = value.email;
+                    editPasswordInput.value = value.password;
+                
+                    // Add a data-key attribute to the "Save" button in the edit form
+                    const saveEditButton = document.querySelector("#editUserModal [type='submit']");
+                    saveEditButton.setAttribute("data-key", key);
+                
+                    saveEditButton.addEventListener("click", function(event) {
+                        event.preventDefault();
+                
+                        const editUsernameInput = document.getElementById("editUsername");
+                        const editEmailInput = document.getElementById("editEmail");
+                        const editPasswordInput = document.getElementById("editPassword");
+                
+                        const username = editUsernameInput.value;
+                        const email = editEmailInput.value;
+                        const password = editPasswordInput.value;
+                
+                        if (username && email && password) {
+                            // Create an updated user object
+                            const updatedUser = {
+                                name: username,
+                                email: email,
+                                password: password
+                            };
+
+
+                            // Update the existing user in local storage
+                            localStorage.setItem(username, JSON.stringify(updatedUser));
+                            if (username !== key){
+                                localStorage.removeItem(key);
+                            }
+                
+                            outputLocalStorage(); // Update the table after editing
+                            // Hide the edit modal
+                            $('#editUserModal').modal('hide');
+                        } else {
+                            alert("Please fill in all fields.");
+                        }
+                    });
+                });
                 
                 
 
@@ -55,6 +101,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         }
     }
+    
 
     
 
@@ -77,6 +124,7 @@ document.addEventListener("DOMContentLoaded", function() {
             usernameInput.value = "";
             emailInput.value = "";
             passwordInput.value = "";
+            $('#editUserModal').modal('hide');
         } else {
             alert("Please fill in all fields.");
         }

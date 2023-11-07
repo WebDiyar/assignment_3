@@ -72,7 +72,7 @@ function registerUser() {
     }
 
     var user = {
-        username: username,
+        name: username,
         email: email,
         password: password
     };

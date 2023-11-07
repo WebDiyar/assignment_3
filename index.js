@@ -26,7 +26,7 @@ function about() {
     const aboutElements = document.getElementsByClassName('about');
     for (let i = 0; i < aboutElements.length; i++) {
         aboutElements[i].addEventListener('click', function() {
-            if (i < 3) {
+            if (i < 1) {
                 alert(nothing);
             } else {
                 alert(str);
