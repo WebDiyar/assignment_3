@@ -3,9 +3,9 @@ const admin = {
     email: 'admin@mail.ru',
     password: 'adminadmin'
 }
-localStorage.setItem('admin',JSON.stringify(admin))
+localStorage.setItem('admin', JSON.stringify(admin))
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const userTableBody = document.getElementById("userTableBody");
     const addUserForm = document.getElementById("addUserForm");
     const editUserForm = document.getElementById("editUserForm");
@@ -25,12 +25,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 const tableRow = userTableBody.insertRow();
                 tableRow.innerHTML = `
                     <td>${key}</td>
-                    <td>${value.name}</td>
                     <td>${value.email}</td>
                     <td>${value.password}</td>
                     <td>
-                        <button class="edit-button" data-key="${key}">Edit</button>
-                        <button class="delete-button" data-key="${key}">Delete</button>
+                    <button class="edit-button" data-key="${key}">Edit</button>                      
+                    <button class="delete-button" data-key="${key}">Delete</button>
                     </td>
                 `;
 
@@ -38,15 +37,12 @@ document.addEventListener("DOMContentLoaded", function() {
                 const deleteButton = tableRow.querySelector(".delete-button");
 
                 // Add event listeners for edit and delete buttons
-                editButton.addEventListener("click", function() {
+                editButton.addEventListener("click", function () {
                     const key = this.getAttribute("data-key");
-                    
-                });
-                
-                
-                
 
-                deleteButton.addEventListener("click", function() {
+                });
+
+                deleteButton.addEventListener("click", function () {
                     const key = this.getAttribute("data-key");
                     // Implement the delete functionality
                     localStorage.removeItem(key);
@@ -56,9 +52,9 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    
 
-    addUserForm.addEventListener("submit", function(event) {
+
+    addUserForm.addEventListener("submit", function (event) {
         event.preventDefault();
 
         const username = usernameInput.value;

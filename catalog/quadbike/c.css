@@ -1,0 +1,220 @@
+/*Main section*/
+.main aside {
+    /* background-color: red; */
+}
+
+.main .section {
+    display: flex;
+    align-items: start;
+    margin-top: 50px;
+}
+
+.main .section-card {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    align-items: center;
+    gap: 25px;
+}
+
+/*Aside*/
+.section aside .options {
+    position: relative;
+    font-family: SF Pro Display;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.44px;
+    text-transform: uppercase;
+}
+
+.section aside .options:hover::after {
+    position: absolute;
+    left: 0;
+    top: 20px;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #1C62CD;
+}
+
+.section aside .options a {
+    color: #2F3035;
+    text-decoration: none;
+}
+
+/*first detail */
+.section aside .first-detail {
+    margin-bottom: 41px;
+}
+
+.section aside .first-detail .availability {
+    padding-top: 48px;
+    color: #2F3035;
+    font-family: 'Inter';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding-bottom: 19px;
+}
+
+.section aside .first-detail label {
+    color: #2F3035;
+    font-family: 'Inter';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.section aside .first-detail label .span1 {
+    padding-right: 42px;
+}
+
+/* Second detail*/
+
+.section aside .second-detail .new-items {
+    color: #2F3035;
+    font-family: 'Inter';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding-bottom: 20px;
+}
+
+.section aside .second-detail label {
+    color: #000;
+    font-family: 'Inter';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.section aside .second-detail label span {
+    margin-right: 20px;
+}
+
+/* Third detail */
+.section aside .third-detail .brand {
+    margin-top: 41px;
+    color: #48494D;
+    font-family: 'Inter';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding-bottom: 22px;
+}
+
+.section aside .third-detail label {
+    color: #000;
+    font-family: 'Inter';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.section aside .third-detail label span {
+    margin-right: 20px;
+    margin-right: 10px;
+}
+
+/* Fourth detail */
+.section aside .fourth-detail .model {
+    margin-top: 41px;
+    color: #2F3035;
+    font-family: 'Inter';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding-bottom: 20px;
+}
+
+.section aside .fourth-detail label {
+    color: #000;
+    font-family: 'Inter';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.section aside .fourth-detail div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Fifth detail */
+.section aside .fifth-detail .country {
+    margin-top: 41px;
+    color: #2F3035;
+    font-family: 'Inter';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding-bottom: 20px;
+}
+
+.section aside .fifth-detail label {
+    color: #000;
+    font-family: 'Inter';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.section aside .fifth-detail div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 60px;
+    row-gap: 20px;
+}
+
+.section aside .fifth-detail div label:nth-child(3),
+.section aside .fifth-detail div label:nth-child(4) {
+    padding-bottom: 20px;
+}
+
+.section aside .fifth-detail .show {
+    margin-top: 20px;
+    color: #1C62CD;
+    font-family: 'Inter';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: underline;
+}
+
+.section aside .choose {
+    margin-right: 30px;
+    margin-top: 42px;
+    border: none;
+    padding: 17px 85px 15px 85px;
+    color: #BDBEC2;
+    text-align: center;
+    font-family: SF Pro Display;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    transition: 0.4s all ease;
+}
+
+.section aside .choose:hover,
+.section aside .choose:active {
+    cursor: pointer;
+    background-color: blue;
+}

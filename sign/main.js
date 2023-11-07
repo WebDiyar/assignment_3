@@ -6,7 +6,7 @@ const admin = {
 localStorage.setItem('admin',JSON.stringify(admin))
 
 function openCity(evt, cityName) {
-    var i, tabcontent, tablinks;
+    let i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
@@ -23,10 +23,10 @@ document.getElementById("defaultOpen").click();
 function registerUser() {
     resetForm();
 
-    var username = document.getElementById("full_name").value;
-    var email = document.getElementById("your_email").value;
-    var password = document.getElementById("password").value;
-    var confirmPassword = document.getElementById("confirm_password").value;
+    let username = document.getElementById("full_name").value;
+    let email = document.getElementById("your_email").value;
+    let password = document.getElementById("password").value;
+    let confirmPassword = document.getElementById("confirm_password").value;
     let valid = true;
 
     function isNotEmpty(value) {
@@ -46,7 +46,7 @@ function registerUser() {
     }
 
     function isValidPassword(password) {
-        const passwordPattern = /^[А-Яа-яA-Za-z0-9]{3,}$/;
+        const passwordPattern = /^.*$/;
         return passwordPattern.test(password);
     }
     
@@ -71,7 +71,7 @@ function registerUser() {
         displayError("confirm_passwordError", "Пароль не совпадают или пустая строка");
     }
 
-    var user = {
+    let user = {
         username: username,
         email: email,
         password: password
@@ -95,8 +95,8 @@ function registerUser() {
 
 function loginUser() {
     resetForm();
-    var username = document.getElementById("username").value;
-    var password = document.getElementById("password_1").value;
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password_1").value;
     valid = true;
 
     function isNotEmpty(value) {
@@ -110,7 +110,7 @@ function loginUser() {
     }
 
     function isValidPassword(password) {
-        const passwordPattern = /^[А-Яа-яA-Za-z0-9]{3,}$/;
+        const passwordPattern = /^.*$/;
         return passwordPattern.test(password);
     }
 
@@ -127,7 +127,7 @@ function loginUser() {
     var storedUser = localStorage.getItem(username);
     if (valid) {
         if (storedUser) {
-            var user = JSON.parse(storedUser);
+            let user = JSON.parse(storedUser);
             if (user.name == 'admin') {
                 if (user.password === password) {
                     alert("Вход в аккаунт админа выполнен!");
