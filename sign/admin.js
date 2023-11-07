@@ -3,9 +3,9 @@ const admin = {
     email: 'admin@mail.ru',
     password: 'adminadmin'
 }
-localStorage.setItem('admin', JSON.stringify(admin))
+localStorage.setItem('admin',JSON.stringify(admin))
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
     const userTableBody = document.getElementById("userTableBody");
     const addUserForm = document.getElementById("addUserForm");
     const editUserForm = document.getElementById("editUserForm");
@@ -24,32 +24,18 @@ document.addEventListener("DOMContentLoaded", function () {
                 // Create a new row for each item
                 const tableRow = userTableBody.insertRow();
                 tableRow.innerHTML = `
-<<<<<<< HEAD
-                    <td>${key}</td>
-                    <td>${value.email}</td>
-                    <td>${value.password}</td>
-                    <td>
-                    <button class="edit-button" data-key="${key}">Edit</button>                      
-                    <button class="delete-button" data-key="${key}">Delete</button>
-=======
                     <td>${value.name}</td>
                     <td>${value.email}</td>
                     <td>${value.password}</td>
                     <td>
                         <button class="edit-button" data-key="${key}" data-toggle="modal" data-target="#editUserModal">Edit</button>
                         <button class="delete-button" data-key="${key}">Delete</button>
->>>>>>> 554e83b10ae2c985974e1c953cf8b0807b4a291a
                     </td>
                 `;
 
                 const editButton = tableRow.querySelector(".edit-button");
                 const deleteButton = tableRow.querySelector(".delete-button");
 
-<<<<<<< HEAD
-                // Add event listeners for edit and delete buttons
-                editButton.addEventListener("click", function () {
-                    const key = this.getAttribute("data-key");
-=======
                 editButton.addEventListener("click", function() {
                     const key = this.getAttribute("data-key");
                 
@@ -105,11 +91,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
                 
                 
->>>>>>> 554e83b10ae2c985974e1c953cf8b0807b4a291a
 
-                });
-
-                deleteButton.addEventListener("click", function () {
+                deleteButton.addEventListener("click", function() {
                     const key = this.getAttribute("data-key");
                     // Implement the delete functionality
                     localStorage.removeItem(key);
@@ -120,9 +103,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     
 
+    
 
-
-    addUserForm.addEventListener("submit", function (event) {
+    addUserForm.addEventListener("submit", function(event) {
         event.preventDefault();
 
         const username = usernameInput.value;

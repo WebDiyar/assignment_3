@@ -6,7 +6,7 @@ const admin = {
 localStorage.setItem('admin',JSON.stringify(admin))
 
 function openCity(evt, cityName) {
-    let i, tabcontent, tablinks;
+    var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
@@ -23,10 +23,10 @@ document.getElementById("defaultOpen").click();
 function registerUser() {
     resetForm();
 
-    let username = document.getElementById("full_name").value;
-    let email = document.getElementById("your_email").value;
-    let password = document.getElementById("password").value;
-    let confirmPassword = document.getElementById("confirm_password").value;
+    var username = document.getElementById("full_name").value;
+    var email = document.getElementById("your_email").value;
+    var password = document.getElementById("password").value;
+    var confirmPassword = document.getElementById("confirm_password").value;
     let valid = true;
 
     function isNotEmpty(value) {
@@ -46,7 +46,7 @@ function registerUser() {
     }
 
     function isValidPassword(password) {
-        const passwordPattern = /^.*$/;
+        const passwordPattern = /^[А-Яа-яA-Za-z0-9]{3,}$/;
         return passwordPattern.test(password);
     }
     
@@ -71,13 +71,8 @@ function registerUser() {
         displayError("confirm_passwordError", "Пароль не совпадают или пустая строка");
     }
 
-<<<<<<< HEAD:sign/main.js
-    let user = {
-        username: username,
-=======
     var user = {
         name: username,
->>>>>>> 554e83b10ae2c985974e1c953cf8b0807b4a291a:sign/sign.js
         email: email,
         password: password
     };
@@ -100,8 +95,8 @@ function registerUser() {
 
 function loginUser() {
     resetForm();
-    let username = document.getElementById("username").value;
-    let password = document.getElementById("password_1").value;
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password_1").value;
     valid = true;
 
     function isNotEmpty(value) {
@@ -115,7 +110,7 @@ function loginUser() {
     }
 
     function isValidPassword(password) {
-        const passwordPattern = /^.*$/;
+        const passwordPattern = /^[А-Яа-яA-Za-z0-9]{3,}$/;
         return passwordPattern.test(password);
     }
 
@@ -132,7 +127,7 @@ function loginUser() {
     var storedUser = localStorage.getItem(username);
     if (valid) {
         if (storedUser) {
-            let user = JSON.parse(storedUser);
+            var user = JSON.parse(storedUser);
             if (user.name == 'admin') {
                 if (user.password === password) {
                     alert("Вход в аккаунт админа выполнен!");
