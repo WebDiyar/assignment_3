@@ -71,8 +71,13 @@ function registerUser() {
         displayError("confirm_passwordError", "Пароль не совпадают или пустая строка");
     }
 
+<<<<<<< HEAD:sign/main.js
     let user = {
         username: username,
+=======
+    var user = {
+        name: username,
+>>>>>>> 554e83b10ae2c985974e1c953cf8b0807b4a291a:sign/sign.js
         email: email,
         password: password
     };
