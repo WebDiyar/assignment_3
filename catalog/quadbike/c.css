@@ -218,3 +218,9 @@
     cursor: pointer;
     background-color: blue;
 }
+
+
+/*
+  <div class="cartTab"><h1>Shopping Cart</h1><div class="listCart"></div><div class="btn"><button class="close">Закрыт окно</button><button class="checkOut">Удалить</button><button class="buy" id="buyButton"><a style="text-decoration: none; color: black;">Купить</a></button></div></div>
+
+*/

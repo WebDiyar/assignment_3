@@ -185,7 +185,7 @@
 
 /*Main section*/
 .main aside {
-    /* background-color: red; */
+    /* background-color: red;  */
 }
 
 .main .section {
@@ -431,7 +431,7 @@
 
 /* Additional styles for buttons and other elements */
 /* cart */
-.cartTab {
+/* .cartTab {
     width: 1300px;
     border: 3px solid gray;
     color: #eee;
@@ -477,7 +477,7 @@ body.showCart .container {
     background-color: #eee;
     color: #000;
     font-size: 24px;
-}
+} */
 
 
 
@@ -605,9 +605,6 @@ body.showCart .container {
     padding: 10px 16px 7.5px 14px;
 }
 
-.item2-img:hover {
-    cursor: pointer;
-}
 
 /*Item3*/
 .section-item3 {
