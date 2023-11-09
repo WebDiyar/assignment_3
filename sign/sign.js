@@ -21,6 +21,7 @@ function openCity(evt, cityName) {
 document.getElementById("defaultOpen").click();
 
 
+
 // real time inputs
 function validateName() {
     const nameInput = document.getElementById("full_name");
@@ -35,12 +36,11 @@ function validateName() {
     }
 
     if (name.length === 0 || name.length < 3 || !isValidName(name)) {
-        nameInput.classList.add("error-border");
-        nameError.textContent = "Имя должно быть не менее 3 букв и содержать только буквы";
-        nameError.style.display = "block";
+        displayError("full_nameError", "Имя должно быть не менее 3 букв и содержать только буквы");
+        setInvalid(nameInput)
     } else {
-        nameInput.classList.remove("error-border");
-        nameError.style.display = "none";
+        displayError("full_nameError", "");
+        setValid(nameInput)
     }
 }
 
@@ -59,10 +59,10 @@ function validateEmail() {
 
     if (!isValidEmail(email) || email.length === 0) {
         displayError("your_emailError", "Введите правильный адрес электронной почты (mail.ru).");
-        emailInput.classList.add("error-border");
+        setInvalid(emailInput)
     } else {
-        emailError.style.display = "none";
-        emailInput.classList.remove("error-border");
+        displayError("your_emailError", "");
+        setValid(emailInput)
     }
 }
 
@@ -78,11 +78,12 @@ function validatePassword() {
         return passwordPattern.test(password);
     }
 
-    if (pw.length === 0 || pw.length < 3 || !isValidPassword(password)) {
+    if (password.length === 0 || password.length < 3 || !isValidPassword(password)) {
         displayError("passwordError", "Пароль должен быть не менее 3 символов и не содержать специальные символы");
+        setInvalid(pw)
     } else {
-        passwordError.style.display = "none";
-        pw.classList.remove("error-border");
+        displayError("passwordError", "");
+        setValid(pw)
     }
 }
 
@@ -90,6 +91,7 @@ function validateConfirmPassword() {
     const confirmPassword = document.getElementById("confirm_password");
     const confirmPasswordError = document.getElementById("confirm_passwordError")
     const confirmValue = confirmPassword.value;
+    const pw = document.getElementById("password");
     // const confirmPassword = document.getElementById("confirm_password").value;
 
     function isValidPassword(confirm_password) {
@@ -97,69 +99,27 @@ function validateConfirmPassword() {
         return passwordPattern.test(confirm_password);
     }
 
-    if (confirmPassword.length === 0 || confirmPassword.length < 3 || !isValidPassword(confirmValue)) {
+    if (confirmValue.length === 0 || confirmValue.length < 3 || !isValidPassword(confirmValue)) {
         displayError("confirm_passwordError", "Пароль должен быть не менее 3 символов и не содержать специальные символы");
-    } else {
-        confirmPasswordError.style.display = "none";
-        confirmPassword.classList.remove("error-border");
+        setInvalid(confirmPassword)
+    }
+    else if (confirmValue != pw.value) {
+        displayError("confirm_passwordError", "Пароли не совпадают")
+        setInvalid(confirmPassword)
+    }
+    else {
+        displayError("confirm_passwordError", "")
+        setValid(confirmPassword)
     }
 }
 // Rest of your code, including the registerUser function
 
 
 function registerUser() {
-    resetForm();
-    validateName();
-    validateEmail();
-    validatePassword();
-    validateConfirmPassword();
 
     var username = document.getElementById("full_name").value;
     var email = document.getElementById("your_email").value;
     var password = document.getElementById("password").value;
-    var confirmPassword = document.getElementById("confirm_password").value;
-    let valid = true;
-
-    function isNotEmpty1(value) {
-        return value.trim() !== '';
-    }
-
-    function isValidPassword1(password) {
-        const passwordPattern = /^[А-Яа-яA-Za-z0-9]{3,}$/;
-        return passwordPattern.test(password);
-    }
-
-    function isValidName1(name) {
-        //Russian, English or Kazakh letters 
-        const namePattern = /^[А-Яа-яA-Za-zҚқҢңҒғІіІі]*$/;
-        return namePattern.test(name);
-    }
-
-    function isValidEmail1(email) {
-        //email requirements 
-        const emailPattern = /^[a-zA-Z0-9._%+-]+@(mail\.ru)$/;
-        return emailPattern.test(email);
-    }
-
-    if (!isNotEmpty1(username) || username.length < 3 || !isValidName1(username)) {
-        valid = false;
-        displayError("full_nameError", "Имя должно быть не менее 3 букв и содержать только буквы");
-    }
-
-    if (!isValidEmail1(email) || !isNotEmpty1(email)) {
-        valid = false;
-        displayError("your_emailError", "Введите правильный адрес электронной почты (mail.ru).");
-    }
-
-    if (!isNotEmpty1(password) || password.length < 3 || !isValidPassword1(password)) {
-        valid = false;
-        displayError("passwordError", "Пароль должен быть не менее 3 символов и не содержать специальные символы");
-    }
-
-    if (password !== confirmPassword || !isNotEmpty1(confirmPassword)) {
-        valid = false;
-        displayError("confirm_passwordError", "Пароль не совпадают или пустая строка");
-    }
 
     var user = {
         name: username,
@@ -167,13 +127,15 @@ function registerUser() {
         password: password
     };
 
-    if (valid) {
+    const form = document.getElementById('myForm');
+
+    if (form.getElementsByClassName("is-valid").length == 4) {
+        // alert(form.getElementsByClassName("is-valid").length)
         let storedUser = localStorage.getItem(username);
         if (!storedUser) {
             localStorage.setItem(username, JSON.stringify(user));
             console.log(localStorage.getItem(username))
             alert("Пользователь успешно зарегистрирован!")
-            // alert("User registered successfully:\n" + JSON.stringify(user, null, 2));
             document.getElementById("myForm").reset();
         }
         else {
@@ -181,18 +143,15 @@ function registerUser() {
         }
     }
 
-
 }
 
-function loginUser() {
-    resetForm();
-    var username = document.getElementById("username").value;
-    var password = document.getElementById("password_1").value;
-    valid = true;
 
-    function isNotEmpty(value) {
-        return value.trim() !== '';
-    }
+
+function validateLoginName() {
+    const nameInput = document.getElementById("username");
+    const nameError = document.getElementById("usernameError");
+
+    const name = nameInput.value;
 
     function isValidName(name) {
         //Russian, English or Kazakh letters 
@@ -200,23 +159,45 @@ function loginUser() {
         return namePattern.test(name);
     }
 
+    if (name.length === 0 || name.length < 3 || !isValidName(name)) {
+        displayError("usernameError", "Имя должно быть не менее 3 букв и содержать только буквы");
+        setInvalid(nameInput)
+    } else {
+        displayError("usernameError", "");
+        setValid(nameInput)
+    }
+}
+
+function validateLoginPassword() {
+    const pw = document.getElementById("password_1");
+    const passwordError = document.getElementById("password_1Error")
+    const password = pw.value;
+
     function isValidPassword(password) {
         const passwordPattern = /^[А-Яа-яA-Za-z0-9]{3,}$/;
         return passwordPattern.test(password);
     }
 
-    if (!isNotEmpty(username) || username.length < 3 || !isValidName(username)) {
-        valid = false;
-        displayError("usernameError", "Имя должно быть не менее 3 букв и содержать только буквы");
-    }
-
-    if (!isNotEmpty(password) || password.length < 3 || !isValidPassword(password)) {
-        valid = false;
+    if (password.length === 0 || password.length < 3 || !isValidPassword(password)) {
         displayError("password_1Error", "Пароль должен быть не менее 3 символов и не содержать специальные символы");
+        setInvalid(pw)
+    } else {
+        displayError("password_1Error", "");
+        setValid(pw)
     }
+}
 
+function loginUser() {
+    
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password_1").value;
+    
+
+    
     var storedUser = localStorage.getItem(username);
-    if (valid) {
+    const form = document.getElementById('yourForm');
+
+    if (form.getElementsByClassName("is-valid").length == 2) {
         if (storedUser) {
             var user = JSON.parse(storedUser);
             if (user.name == 'admin') {
@@ -234,6 +215,7 @@ function loginUser() {
                 window.location.href = "../index.html";
             } else {
                 alert("Неправильный пароль");
+                
             }
         } else {
             alert("Пользователь не найден");
@@ -261,6 +243,15 @@ function resetForm() {
     });
 }
 
+function setInvalid(element) {
+    element.classList.add('is-invalid');
+    element.classList.remove('is-valid')
+  }
+  
+  function setValid(element) {
+    element.classList.add('is-valid');
+    element.classList.remove('is-invalid')
+  };
 
 
 
