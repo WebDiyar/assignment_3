@@ -116,6 +116,10 @@ function validateConfirmPassword() {
 
 
 function registerUser() {
+    validateName();
+    validateEmail();
+    validatePassword();
+    validateConfirmPassword();
 
     var username = document.getElementById("full_name").value;
     var email = document.getElementById("your_email").value;
@@ -188,12 +192,14 @@ function validateLoginPassword() {
 }
 
 function loginUser() {
-    
+    validateLoginName();
+    validateLoginPassword();
+
     var username = document.getElementById("username").value;
     var password = document.getElementById("password_1").value;
-    
 
-    
+
+
     var storedUser = localStorage.getItem(username);
     const form = document.getElementById('yourForm');
 
@@ -215,7 +221,7 @@ function loginUser() {
                 window.location.href = "../index.html";
             } else {
                 alert("Неправильный пароль");
-                
+
             }
         } else {
             alert("Пользователь не найден");
@@ -246,12 +252,12 @@ function resetForm() {
 function setInvalid(element) {
     element.classList.add('is-invalid');
     element.classList.remove('is-valid')
-  }
-  
-  function setValid(element) {
+}
+
+function setValid(element) {
     element.classList.add('is-valid');
     element.classList.remove('is-invalid')
-  };
+};
 
 
 

@@ -2,6 +2,10 @@
     max-width: 1170px;
     margin: 0 auto;
 }
+
+html, body{
+    background-color: red;
+}
 #rubl {
     font-family: 'Inter';
 }

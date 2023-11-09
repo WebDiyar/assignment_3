@@ -17,7 +17,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../reset.css">
-    <script defer src="../../index.js"></script>
+    <script defer src="jetski.js"></script>
+    <!-- <script defer src="../../index.js"></script> -->
     <style>
         html,
         body {
@@ -115,10 +116,10 @@
                     <details class="third-detail">
                         <summary class="brand">Бренд</summary>
                         <label>
-                            <input type="checkbox" value="option1"> <span>SeaDoo</span>
+                            <input type="checkbox" value="SeaDoo" name="brand"> <span>SeaDoo</span>
                         </label>
                         <label>
-                            <input type="checkbox" value="option2"> <span>Spark</span>
+                            <input type="checkbox" value="Spark" name="brand"> <span>Spark</span>
                         </label>
                     </details>
 
@@ -127,125 +128,8 @@
                 </aside>
 
                 <div
-                    class="section-card d-flex flex-wrap align-items-center justify-content-center justify-content-md-start">
+                    class="section-card d-flex flex-wrap align-items-center justify-content-center justify-content-md-start" id="jetski-items-container">
                     <!--1-->
-                    <div class="section-item1">
-                        <img src="../img/section/jetski/img-1.png" alt="item-1" class="item1-img">
-                        <span class="section-item1-tittle">
-                            Гидроцикл BRP SeaDoo GTI <br>
-                            130hp SE Black\Mango
-                        </span>
-                        <span class="section-item1-cost" id="rubl">
-                            1 049 500 ₽
-                        </span>
-                        <div class="section-item1-shop"><img src="../img/section/shop.svg" alt="shop"></div>
-                    </div>
-
-                    <!--2-->
-                    <div class="section-item2">
-                        <div class="item2-sale"><span class="sale">SALE</span></div>
-                        <img src="../img/section/jetski/img-2.png" alt="item-2" class="item2-img">
-                        <span class="section-item2-tittle">
-                            Гидроцикл BRP SeaDoo GTI <br>
-                            155hp SE Long Blue Metallic
-                        </span>
-                        <span class="section-item2-cost" id="rubl">
-                            1 100 475 ₽
-                        </span>
-
-                        <div class="section-item2-shop"><img src="../img/section/shop.svg" alt="shop"></div>
-                    </div>
-
-                    <!--3-->
-                    <div class="section-item3">
-                        <img src="../img/section/jetski/img-3.png" alt="item-3" class="item3-img">
-                        <span class="section-item3-tittle">
-                            Гидроцикл BRP SeaDoo GTI <br>
-                            130hp SE White\Krypton Green
-                        </span>
-                        <span class="section-item3-cost" id="rubl">
-                            1 067 500 ₽
-                        </span>
-                        <div class="section-item3-shop"><img src="../img/section/shop.svg" alt="shop"></div>
-                    </div>
-
-                    <!--4-->
-                    <div class="section-item4">
-                        <div class="item4-sale"><span class="sale">SALE</span></div>
-                        <img src="../img/section/jetski/img-4.png" alt="item-4" class="item4-img">
-                        <span class="section-item4-tittle">
-                            Гидроцикл BRP SeaDoo GTR <br> 230hp STD Black / Gulfstream
-                        </span>
-                        <span class="section-item4-cost" id="rubl">
-                            нет в наличии
-                        </span>
-                        <span class="section-item4-error"><a href="../../form_validation/form_validation.html">Сообщить
-                                о поступлении</a></span>
-                    </div>
-
-                    <!--5-->
-                    <div class="section-item5">
-                        <img src="../img/section/jetski/img-5.png" alt="item-5" class="item5-img">
-                        <span class="section-item5-tittle">
-                            Гидроцикл BRP SeaDoo GTX <br>
-                            300hp LTD Liquid Metal
-                        </span>
-                        <span class="section-item5-cost" id="rubl">
-                            1 543 000 ₽
-                        </span>
-                        <div class="section-item5-shop"><img src="../img/section/shop.svg" alt="shop"></div>
-                    </div>
-
-                    <!--6-->
-                    <div class="section-item6">
-                        <img src="../img/section/jetski/img-6.png" alt="item-6" class="item6-img">
-                        <span class="section-item6-tittle">
-                            Гидроцикл Spark BRP 60hp 2 up
-                        </span>
-                        <span class="section-item6-cost" id="rubl">
-                            732 345 ₽
-                        </span>
-                        <div class="section-item6-shop"><img src="../img/section/shop.svg" alt="shop"></div>
-                    </div>
-
-                    <!--7-->
-                    <div class="section-item7">
-                        <img src="../img/section/jetski/img-7.png" alt="item-7" class="item7-img">
-                        <span class="section-item7-tittle">
-                            Гидроцикл Spark BRP GTS 90hp Rental
-                        </span>
-                        <span class="section-item7-cost" id="rubl">
-                            857 666 ₽
-                        </span>
-                        <div class="section-item7-shop"><img src="../img/section/shop.svg" alt="shop"></div>
-                    </div>
-
-                    <!--8-->
-                    <div class="section-item8">
-                        <div class="item2-sale"><span class="sale">SALE</span></div>
-                        <img src="../img/section/jetski/img-8.png" alt="item-8" class="item8-img">
-                        <span class="section-item8-tittle">
-                            Гидроцикл BRP SeaDoo <br> WAKE 230hp PRO Teal blue
-                        </span>
-                        <span class="section-item8-cost" id="rubl">
-                            1 229 711 ₽
-                        </span>
-
-                        <div class="section-item8-shop"><img src="../img/section/shop.svg" alt="shop"></div>
-                    </div>
-
-                    <!--9-->
-                    <div class="section-item9">
-                        <img src="../img/section/jetski/img-9.png" alt="item-9" class="item9-img">
-                        <span class="section-item9-tittle">
-                            Гидроцикл Spark 2-UP 900 <br> Ho Ace Chili Pepper
-                        </span>
-                        <span class="section-item9-cost" id="rubl">
-                            587 440 ₽
-                        </span>
-                        <div class="section-item9-shop"><img src="../img/section/shop.svg" alt="shop"></div>
-                    </div>
-
                 </div>
             </section>
 

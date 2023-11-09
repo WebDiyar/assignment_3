@@ -17,6 +17,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../reset.css">
+    <script defer src="quadbike.js"></script>
     <!-- <script defer src="quadbike.js"></script> -->
     <!-- <script defer src="../addToBasket/addToBasket.js"></script> -->
     <!-- <script defer src="../../index.js"></script> -->
@@ -113,112 +114,43 @@
 
             <section class="section d-flex align-items-start flex-wrap flex-sm-wrap flex-md-nowrap">
                 <aside>
-                
+
                     <span class="options"><a href="#"> Параметры </a></span>
-                
+
                     <details class="third-detail">
                         <summary class="brand">Бренд</summary>
                         <div>
                             <label>
-                                <input type="checkbox" value="option1"> <span>Excite</span>
+                                <input type="checkbox" value="Excite" name="brand"> <span>Excite</span>
                             </label>
                             <label>
-                                <input type="checkbox" value="option2"> <span>TGB</span>
+                                <input type="checkbox" value="TGB" name="brand"> <span>TGB</span>
                             </label>
                             <label>
-                                <input type="checkbox" value="option2"> <span>Segway</span>
+                                <input type="checkbox" value="Segway" name="brand"> <span>Segway</span>
                             </label>
                             <label>
-                                <input type="checkbox" value="option2"> <span>FunBikes</span>
+                                <input type="checkbox" value="FunBikes" name="brand"> <span>FunBikes</span>
                             </label>
                         </div>
                     </details>
-                
-                
-                
+
+
+
                     <button class="choose mb-2">Выбрать</button>
                 </aside>
-                <div
-                    class="section-card d-flex flex-wrap align-items-center justify-content-center justify-content-md-start">
-                    <!--1-->
-                    <div class="section-item1">
-                        <img src="../img/section/quadbike/img-1.png" alt="item-1" class="item1-img">
-                        <span class="section-item1-tittle">
-                            Квадроцикл Excite 50cc Blue Kids 2023 Premium Mini
-                        </span>
-                        <span class="section-item1-cost" id="rubl">
-                            531 500 ₽
-                        </span>
-                        <div class="section-item1-shop">
-                            <img src="../img/section/shop.svg" alt="shop">
-                        </div>
-                    </div>
-                    <!--2-->
-                    <div class="section-item2">
-                        <div class="item2-sale"><span class="sale">SALE</span></div>
+                <div class="section-card d-flex flex-wrap align-items-center justify-content-center justify-content-md-start"
+                    id="items-container">
 
-                        <img src="../img/section/quadbike/img-2.png" alt="item-2" class="item2-img">
-                        <span class="section-item2-tittle">
-                            Квадроцикл TGB Blade 600SL Grey Agricultural
-                        </span>
-                        <span class="section-item2-cost" id="rubl">
-                            719 000 ₽
-                        </span>
-
-                        <div class="section-item2-shop"><img src="../img/section/shop.svg" alt="shop"></div>
-                    </div>
-
-                    <!--3-->
-                    <div class="section-item3">
-                        <img src="../img/section/quadbike/img-3.png" alt="item-3" class="item3-img">
-                        <span class="section-item3-tittle">
-                            Квадроцикл Segway Snarler ATV6 B 4x4 Prairie/Camo
-                        </span>
-                        <span class="section-item3-cost" id="rubl">
-                            534 000 ₽
-                        </span>
-                        <div class="section-item3-shop"><img src="../img/section/shop.svg" alt="shop"></div>
-                    </div>
-
-                    <!--4-->
-                    <div class="section-item4">
-                        <div class="item4-sale"><span class="sale">SALE</span></div>
-                        <img src="../img/section/quadbike/img-4.png" alt="item-4" class="item4-img">
-                        <span class="section-item4-tittle">
-                            Квадроцикл FunBikes Xtrax E-Sport Electric Blue Junior
-                        </span>
-                        <span class="section-item4-cost" id="rubl">
-                            нет в наличии
-                        </span>
-                        <span class="section-item4-error"><a href="../../form_validation/form_validation.html">Сообщить
-                                о поступлении</a></span>
-                    </div>
-
-                    <!--5-->
-                    <div class="section-item5">
-                        <img src="../img/section/quadbike/img-5.png" alt="item-5" class="item5-img"></a>
-                        <span class="section-item5-tittle">
-                            Квадроцикл FunBikes X-Max Roughrider 1600w Green
-                        </span>
-                        <span class="section-item5-cost" id="rubl">
-                            691 000 ₽
-                        </span>
-                        <div class="section-item5-shop"><img src="../img/section/shop.svg" alt="shop"></div>
-                    </div>
-
-                    <!--6-->
-                    <div class="section-item6">
-                        <img src="../img/section/quadbike/img-6.png" alt="item-6" class="item6-img"></a>
-                        <span class="section-item6-tittle">
-                            Квадроцикл TGB Landmaster 600 Green Agricultural
-                        </span>
-                        <span class="section-item6-cost" id="rubl">
-                            745 235 ₽
-                        </span>
-                        <div class="section-item6-shop"><img src="../img/section/shop.svg" alt="shop"></div>
-                    </div>
                 </div>
             </section>
+
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <!-- Content will be added here dynamically -->
+                </div>
+                <span class="close-btn" onclick="closeModal()">×</span>
+            </div>
 
         </div>
     </main>
