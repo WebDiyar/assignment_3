@@ -29,8 +29,8 @@ document.addEventListener("DOMContentLoaded", function() {
                     <td>${value.email}</td>
                     <td>${value.password}</td>
                     <td>
-                        <button class="edit-button" data-key="${key}" data-toggle="modal" data-target="#editUserModal">Edit</button>
-                        <button class="delete-button" data-key="${key}">Delete</button>
+                        <button class="edit-button" data-key="${key}" data-toggle="modal" data-target="#editUserModal">Изменить</button>
+                        <button class="delete-button" data-key="${key}">Удалить</button>
                     </td>
                 `;
 
