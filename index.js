@@ -118,8 +118,6 @@ updateCountdown();
 slider();
 
 
-
-
 // const heart = document.getElementById('heart');
 // const heart1 = document.getElementById('heart1');
 // const heart2 = document.getElementById('heart2');
