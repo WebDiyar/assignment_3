@@ -1,6 +1,18 @@
 .container {
     max-width: 1170px;
     margin: 0 auto;
+    font-family: 'Inter';
+}
+html,
+body {
+    box-sizing: border-box;
+    font-family: 'Inter';
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
 }
 
 /* Nav */
@@ -517,7 +529,7 @@ body.showCart .container {
 .section-item1-cost {
     color: #2F3035;
     text-align: center;
-    font-family: Barlow;
+    font-family: 'Inter';
     font-size: 30px;
     font-style: normal;
     font-weight: 700;
@@ -585,7 +597,7 @@ body.showCart .container {
 .section-item2-cost {
     text-align: center;
     color: #2F3035;
-    font-family: Barlow;
+    font-family: 'Inter';
     font-size: 30px;
     font-style: normal;
     font-weight: 700;
@@ -644,7 +656,7 @@ body.showCart .container {
     text-align: center;
     color: #000000;
     text-align: center;
-    font-family: Barlow;
+    font-family: 'Inter';
     font-size: 30px;
     font-style: normal;
     font-weight: 700;
@@ -770,7 +782,7 @@ body.showCart .container {
 .section-item5-cost {
     color: #2F3035;
     text-align: center;
-    font-family: Barlow;
+    font-family: 'Inter';
     font-size: 30px;
     font-style: normal;
     font-weight: 700;
@@ -823,7 +835,7 @@ body.showCart .container {
 .section-item6-cost {
     color: #2F3035;
     text-align: center;
-    font-family: Barlow;
+    font-family: 'Inter';
     font-size: 30px;
     font-style: normal;
     font-weight: 700;
@@ -875,7 +887,7 @@ body.showCart .container {
 .section-item7-cost {
     color: #2F3035;
     text-align: center;
-    font-family: Barlow;
+    font-family: 'Inter';
     font-size: 30px;
     font-style: normal;
     font-weight: 700;
@@ -943,7 +955,7 @@ body.showCart .container {
     padding-bottom: 31px;
     text-align: center;
     color: #2F3035;
-    font-family: Barlow;
+    font-family: 'Inter';
     font-size: 30px;
     font-style: normal;
     font-weight: 700;
@@ -1157,36 +1169,26 @@ body.showCart .container {
 }
 
 
-.modal {
+/* .modal {
     display: none;
-    /* Hidden by default */
     position: fixed;
-    /* Stay in place */
     z-index: 1;
-    /* Sit on top */
     left: 0;
     top: 0;
     width: 100%;
-    /* Full width */
     height: 100%;
-    /* Full height */
     overflow: auto;
-    /* Enable scroll if needed */
     background-color: rgb(0, 0, 0);
-    /* Fallback color */
     background-color: rgba(0, 0, 0, 0.4);
-    /* Black w/ opacity */
 }
 
 .modal-content {
     background-color: #fefefe;
     margin: 15% auto;
-    /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-    /* Could be more or less, depending on screen size */
-}
+} */
 
 .close-btn {
     color: #aaa;

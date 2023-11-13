@@ -65,4 +65,4 @@ function displayItems(items) {
 
 document.querySelector('.choose').addEventListener('click', filterItems);
 
-displayItems(jsonDataSnojsonDataEnginewmobile);
+displayItems(jsonDataEngine);

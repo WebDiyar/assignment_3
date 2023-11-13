@@ -1,5 +1,5 @@
 function updateCountdown() {
-    const targetDate = new Date('2023-11-20T00:00:00'); //(10/31/2023)
+    const targetDate = new Date('2023-11-26T00:00:00'); //(10/31/2023)
     const currentDate = new Date();
     const timeDifference = targetDate - currentDate;
     if (timeDifference < 0) {
@@ -17,37 +17,37 @@ function updateCountdown() {
     }
 }
 
-function about() {
-    let str = 'Компания "DRIVE MOTO" - это организация, специализирующаяся на предоставлении услуг в сфере разных транспортов' +
-        ' и мотоциклетного оборудования в различных городах России. Основанная с целью удовлетворения потребностей клиентов,' +
-        ' "DRIVE MOTO" предлагает широкий ассортимент услуг и продуктов для множества видов техник.'
-    const aboutElements = document.getElementsByClassName('about');
-    for (let i = 0; i < aboutElements.length; i++) {
-        aboutElements[i].addEventListener('click', function () {
-            if (i < 3) {
-                window.location.href = "catalog/addToBasket/addToBasket.html";
-            } else {
-                alert(str);
-            }
-        });
-    }
-}
+// function about() {
+//     let str = 'Компания "DRIVE MOTO" - это организация, специализирующаяся на предоставлении услуг в сфере разных транспортов' +
+//         ' и мотоциклетного оборудования в различных городах России. Основанная с целью удовлетворения потребностей клиентов,' +
+//         ' "DRIVE MOTO" предлагает широкий ассортимент услуг и продуктов для множества видов техник.'
+//     const aboutElements = document.getElementsByClassName('about');
+//     for (let i = 0; i < aboutElements.length; i++) {
+//         aboutElements[i].addEventListener('click', function () {
+//             if (i < 3) {
+//                 window.location.href = "catalog/addToBasket/addToBasket.html";
+//             } else {
+//                 alert(str);
+//             }
+//         });
+//     }
+// }
 
-function contact() {
-    document.getElementById('contact').addEventListener('click', function () {
-        alert('Наши контакты: +77753471859');
-    });
-}
+// function contact() {
+//     document.getElementById('contact').addEventListener('click', function () {
+//         alert('Наши контакты: +77753471859');
+//     });
+// }
 
-function store() {
-    document.getElementById('store').addEventListener('click', function () {
-        alert('Наши адреса: \n' +
-            'Москва, ул. Пушкина 21   пн-сб: 8.00-19.00, вс: 9.00-17.00 \n' +
-            'Москва, ул. Южная 134   пн-сб: 8.00-19.00, вс: 9.00-17.00 \n' +
-            'Санкт-Петербург, ул. Красная 19   пн-сб: 8.00-19.00, вс: 9.00-17.00 \n' +
-            'Киев, ул Шевченко 167   пн-сб: 8.00-19.00, вс: 9.00-17.00');
-    });
-}
+// function store() {
+//     document.getElementById('store').addEventListener('click', function () {
+//         alert('Наши адреса: \n' +
+//             'Москва, ул. Пушкина 21   пн-сб: 8.00-19.00, вс: 9.00-17.00 \n' +
+//             'Москва, ул. Южная 134   пн-сб: 8.00-19.00, вс: 9.00-17.00 \n' +
+//             'Санкт-Петербург, ул. Красная 19   пн-сб: 8.00-19.00, вс: 9.00-17.00 \n' +
+//             'Киев, ул Шевченко 167   пн-сб: 8.00-19.00, вс: 9.00-17.00');
+//     });
+// }
 
 function slider() {
     let i = 1;
@@ -103,7 +103,9 @@ function validateForm() {
         emailError.textContent = "";
 
     if (valid) {
-        alert("Спасибо! Мы уведомим вас о предстоящих акциях.");
+        const modal = new bootstrap.Modal(document.getElementById("staticBackdrop0"));
+        modal.toggle();
+
     }
 
 }
@@ -111,9 +113,8 @@ function displayError(element, message) {
     element.textContent = message;
 }
 
-store()
-about();
-contact();
+
+
 updateCountdown();
 slider();
 

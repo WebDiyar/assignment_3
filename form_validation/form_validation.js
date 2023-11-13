@@ -21,7 +21,7 @@ function validateForm(event) {
 
     function isValidEmail(email) {
         //email requirements 
-        const emailPattern = /^[a-zA-Z0-9._%+-]+@(mail\.ru)$/;
+        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
         return emailPattern.test(email);
     }
 
@@ -46,7 +46,7 @@ function validateForm(event) {
     //Email 
     if (!isValidEmail(email.value) || !isNotEmpty(email.value)) {
         valid = false;
-        displayError("emailError", "Введите правильный адрес электронной почты (mail.ru).");
+        displayError("emailError", "Введите правильный адрес электронной почты.");
     }
 
     //Message 

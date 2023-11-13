@@ -53,12 +53,12 @@ function validateEmail() {
 
     function isValidEmail(email) {
         //email requirements 
-        const emailPattern = /^[a-zA-Z0-9._%+-]+@(mail\.ru)$/;
+        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
         return emailPattern.test(email);
     }
 
     if (!isValidEmail(email) || email.length === 0) {
-        displayError("your_emailError", "Введите правильный адрес электронной почты (mail.ru).");
+        displayError("your_emailError", "Введите правильный адрес электронной почты.");
         setInvalid(emailInput)
     } else {
         displayError("your_emailError", "");

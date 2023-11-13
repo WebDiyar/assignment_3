@@ -2,7 +2,49 @@
     max-width: 1170px;
     margin: 0 auto;
 }
+html,
+body {
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif, 'Krona One', sans-serif;
+}
 
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+#promo {
+    background-color: #0073e6;
+    color: #fff;
+    padding: 20px;
+}
+
+#span-data {
+    font-size: 24px;
+}
+
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    flex-wrap: nowrap;
+}
+
+.countdown-item {
+    margin: 0 10px;
+    font-size: 36px;
+    background-color: #b26363;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.countdown-label {
+    font-size: 19px;
+    color: white;
+}
 /* Nav */
 /* .heading-nav {
     display: flex;
@@ -324,7 +366,7 @@
 #card4 #left-side {
     display: flex;
     flex-direction: column;
-    padding: 20px 35px 16px 20px;
+    padding: 20px 0px 16px 20px;
 }
 
 #card4 #card-img4 {
@@ -502,7 +544,7 @@
     right: 19px;
 }
 .item1-img {
-    padding-top: 52px;
+    padding-top: 53px;
     padding-left: 40px;
     padding-right: 31px;
 }
@@ -533,7 +575,7 @@
     width: 60px;
     border-radius: 0px 10px 0px 0px;
     background:  #1C62CD;
-    padding: 10px 16px 7.5px 14px;
+    padding: 10px 16px 10px 14px;
 }
 
 /*Item2*/
@@ -567,7 +609,7 @@
 }
 
 .item2-img {
-    padding-top: 52px;
+    padding-top: 58px;
     padding-left: 40px;
     padding-right: 31px;
 }
@@ -598,7 +640,7 @@
     width: 60px;
     border-radius: 0px 10px 0px 0px;
     background: #1C62CD;
-    padding: 10px 16px 7.5px 14px;
+    padding: 10px 16px 10px 14px;
 }
 
 /*Item 3*/
@@ -649,7 +691,7 @@
     width: 60px;
     border-radius: 0px 10px 0px 0px;
     background: #1C62CD;
-    padding: 10px 16px 7.5px 14px;
+    padding: 10px 16px 10px 14px;
 }
 
 /* Item 4*/
@@ -760,7 +802,9 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content:space-around; 
 }
+
 
 .about-discounts-picture1{
     padding-left: 71px;
