@@ -138,8 +138,8 @@ function registerUser() {
         let storedUser = localStorage.getItem(username);
         if (!storedUser) {
             localStorage.setItem(username, JSON.stringify(user));
-            console.log(localStorage.getItem(username))
-            alert("Пользователь успешно зарегистрирован!")
+            console.log(localStorage.getItem(username));
+            alert("Пользователь успешно зарегистрирован!");
             document.getElementById("myForm").reset();
         }
         else {
@@ -218,7 +218,17 @@ function loginUser() {
             else if (user.password === password) {
                 alert("Вход выполнен!");
                 // Display the saved user data in an alert
-                window.location.href = "../index.html";
+                var user1 = {
+                    name: user.name,
+                    email: user.email,
+                    password: user.password
+                };
+                var temp = localStorage.getItem(user1);
+                if (temp) {
+                    localStorage.removeItem(user1);
+                }
+                localStorage.setItem("user1", JSON.stringify(user1));
+                window.location.href = "../user_page/user_page.html";
             } else {
                 alert("Неправильный пароль");
 

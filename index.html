@@ -51,7 +51,7 @@
                                 21</span></a>
                         <span>
                             <div class="about nav-img">
-                                <img src="card-product/img/header/human-nav.svg" alt="human-img">
+                                <a id="profile" href="#" onclick="checkLoginned()" ><img src="card-product/img/header/human-nav.svg" alt="human-img"></a>
                                 <img src="card-product/img/header/shop-nav.svg" alt="shop-img">
                             </div>
                         </span>
@@ -88,7 +88,7 @@
     </header>
 
     <main class="main">
-        <div class="container">
+        <div class="container" id="form">
             <section id="section1" class="d-flex justify-content-xl-between justify-content-around">
                 <div id="carouselExampleIndicators" class="carousel slide">
                     <a class="link-banner" href="catalog/jetski/catalog.html"><img class="banner img-fluid"
@@ -297,8 +297,7 @@
 
     <footer id="footer-end" class="py-5">
         <div class="container">
-            <div
-                class="row d-flex gap-4 gap-lg-0 d-md-flex justify-content-md-center align-items-md-center d-xl-flex align-items-xl-center w-100">
+            <div class="row d-flex gap-4 gap-lg-0 d-md-flex justify-content-md-center align-items-md-center d-xl-flex align-items-xl-center w-100">
 
                 <div class="col-md-6 col-lg-3">
                     <div class="footer-content">
@@ -316,6 +315,22 @@
                                 <div class="error" id="emailError" style="font-size: 13px;margin-top: 2px;"></div>
                             </div>
                         </form>
+                    </div>
+                </div>
+                <div class="modal fade" id="staticBackdropNotLoginned" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title" id="staticBackdropLabel">Личный кабинет</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body" style="line-height: 30px;">
+                                Вы не авторизовались!
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="modal fade" id="staticBackdrop0" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">

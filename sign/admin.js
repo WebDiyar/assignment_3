@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
         for (let i = 0; i < localStorage.length; i++) {
             const key = localStorage.key(i); // Get the key at index i
             val = localStorage.getItem(key);
-            if (key !== "admin" && val.includes("email")) {
+            if (key !== "admin" && val.includes("email") && key != "user1") {
                 const value = JSON.parse(localStorage.getItem(key)); // Get the value for the key
 
                 // Create a new row for each item

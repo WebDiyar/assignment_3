@@ -8,10 +8,16 @@ body {
     font-size: 12px;
 }
 
+.goback {
+	max-width: 937px;
+	margin:  0 auto;
+	text-decoration: none;
+	font-size: 20px;
+}
 
 .page-content {
 	width: 100%;
-	margin:  0 auto;
+	margin-top: 80px;
 
 	display: flex;
 	display: -webkit-flex;
@@ -39,7 +45,7 @@ body {
 	-ms-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
 	-moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
 	-webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
-	margin: 177px 0;
+	margin: 0px 0;
 	color: #fff;
 	position: relative;
 	display: flex;
@@ -215,12 +221,15 @@ body {
 /* Responsive */
 @media screen and (max-width: 991px) {
 	.form-v8-content {
-		margin: 180px 20px;
+		margin: 50px 20px 0px 20px;
 		flex-direction:  column;
 		-o-flex-direction:  column;
 		-ms-flex-direction:  column;
 		-moz-flex-direction:  column;
 		-webkit-flex-direction:  column;
+	}
+	.goback {
+		margin-left: 20px;
 	}
 	.form-v8-content .form-left {
 		width: 100%;

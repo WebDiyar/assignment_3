@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="../reset.css">
     <script defer src="quadbike.js"></script>
     <script defer src="../catalog.js"></script>
+    <script defer src="../checkLogined.js"></script>
     <!-- <script defer src="quadbike.js"></script> -->
     <!-- <script defer src="../addToBasket/addToBasket.js"></script> -->
     <!-- <script defer src="../../index.js"></script> -->
@@ -53,7 +54,7 @@
                                 21</span></a>
                         <span>
                             <div class="about nav-img">
-                                <img src="../../card-product/img/header/human-nav.svg" alt="human-img">
+                                <a id="profile" href="#" onclick="checkLoginned()" ><img src="../../card-product/img/header/human-nav.svg" alt="human-img"></a>
                                 <img src="../../card-product/img/header/shop-nav.svg" alt="shop-img"> <span
                                     id="cartCount">0</span>
                             </div>
@@ -166,6 +167,21 @@
                         </form>
                     </div>
                 </div>
+                <div class="modal fade" id="staticBackdropNotLoginned" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title" id="staticBackdropLabel">Личный кабинет</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body" style="line-height: 30px;">
+                                Вы не авторизовались!
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                            </div>
+                        </div>
+                    </div>
                 <div class="modal fade" id="staticBackdrop0" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">
                       <div class="modal-content">

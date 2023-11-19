@@ -4,28 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catalog</title>
-    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+    <title>User Page</title>
+    <link rel="shortcut icon" href="../card-product/img/favicon.png" type="image/x-icon">
     <!--Google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&family=Krona+One&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&family=Krona+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA=" crossorigin="anonymous" />
     <!--CSS-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="../reset.css">
-    <script defer src="allterrain.js"></script>
-    <script defer src="../catalog.js"></script>
-    <script defer src="../checkLogined.js"></script>
-    
+    <link rel="stylesheet" href="../main/reset.css">
+    <link rel="stylesheet" href="../main/style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="user_page.js"></script>
+    <style>
 
+    </style>
 </head>
 
-<body>
-    <header id="header" class="header px-3 mt-4 mb-3">
+<body style="overflow-x: hidden;">
+    <header id="header" class="header px-3 mt-4">
         <div class="container">
             <div class="row d-sm-flex flex-sm-column row-gap-sm-2">
                 <div class="col-xl-12 p-0">
@@ -33,17 +33,17 @@
                         <span class="d-none d-lg-block">
                             <ul class="navbar-nav fs-5 fw-bold">
                                 <li class="nav-item d-none d-lg-block"><a class="nav-link text-black"
-                                        href="../../index.html">Магазин</a></li>
+                                        href="../index.html">Магазин</a></li>
                                 <li class="nav-item d-none d-lg-block"><a class="nav-link text-black"
-                                        href="../../form_validation/form_validation.html">Акции</a>
+                                        href="../form_validation/form_validation.html">Акции</a>
                                 </li>
-                                <li class="nav-item d-none d-lg-block"><a class="nav-link" href="../../sign/sign.html" style="color: black;">Вход и
-                                        Регистрация</a></li>
+                                <li class="nav-item d-none d-lg-block"><a class="nav-link text-black"
+                                        href="../sign/sign.html">Вход и Регистрация</a></li>
                             </ul>
                         </span>
 
                         <span>
-                            <a class="navbar-brand d-flex align-content-center" href="../../index.html">
+                            <a class="navbar-brand d-flex align-content-center" href="../index.html">
                                 <h1 class="fs-5 fw-bold">DRIVE MOTO</h1>
                             </a>
                         </span>
@@ -52,8 +52,8 @@
                                 21</span></a>
                         <span>
                             <div class="about nav-img">
-                                <a id="profile" href="#" onclick="checkLoginned()" ><img src="../../card-product/img/header/human-nav.svg" alt="human-img"></a>
-                                <img src="../../card-product/img/header/shop-nav.svg" alt="shop-img">
+                                <a href="#"><img src="../card-product/img/header/human-nav.svg" alt="human-img"></a>
+                                <img src="../card-product/img/header/shop-nav.svg" alt="shop-img">
                             </div>
                         </span>
                     </nav>
@@ -66,27 +66,28 @@
                     <hr>
                     <nav id="header2" class="navbar navbar-expand-lg d-flex justify-content-between align-items-center">
                         <ol class="navbar-nav d-flex justify-content-between w-100">
-                            <li class="nav-item d-lg-none"><a class="nav-link" href="../../index.html">Магазин</a></li>
+                            <li class="nav-item d-lg-none"><a class="nav-link" href="../index.html">Магазин</a></li>
                             <li class="nav-item d-lg-none"><a class="nav-link"
-                                    href="../../form_validation/form_validation.html">Акции</a></li>
-                            <li class="about nav-item d-lg-none"><a class="nav-link" href="../../sign/sign.html"
-                                    style="color: black;">Вход и
-                                    Регистрация</a></li>
-                            <li class="nav-item"><a class="nav-link" href="../quadbike/catalog.html">Квадроциклы</a>
+                                    href="../form_validation/form_validation.html">Акции</a></li>
+                            <li class="nav-item d-lg-none"><a class="nav-link" href="../sign/sign.html">Вход и Регистрация</a></li>
+                            <li class="nav-item"><a class="nav-link"
+                                    href="../catalog/quadbike/catalog.html">Квадроциклы</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../catalog/jetski/catalog.html">Гидроциклы</a>
                             </li>
-                            <li class="nav-item"><a class="nav-link" href="../jetski/catalog.html">Гидроциклы</a></li>
-                            <li class="nav-item"><a class="nav-link" href="../boat/catalog.html">Катера</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Вездеходы</a></li>
-                            <li class="nav-item"><a class="nav-link" href="../snowmobile/catalog.html">Снегоходы</a>
+                            <li class="nav-item"><a class="nav-link" href="../catalog/boat/catalog.html">Катера</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../catalog/allterrain/catalog.html">Вездеходы</a>
                             </li>
-                            <li class="nav-item"><a class="nav-link" href="../engine/catalog.html">Двигатели</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../catalog/snowmobile/catalog.html">Снегоходы</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="../catalog/engine/catalog.html">Двигатели</a>
+                            </li>
                         </ol>
                     </nav>
                     <nav class="navbar navbar-expand-lg">
                         <ul class="navbar-nav mr-auto">
-                            <li class="nav-item"><a class="nav-link" href="../../index.html">Главная</a></li>
-                            <img src="../img/header/Back.svg" alt="Back" class="img-fluid d-none d-lg-block" width="6">
-                            <li class="nav-item"><a class="nav-link" href="#">Вездеходы</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
+                            <img src="img/Back.svg" alt="Back" class="img-fluid d-none d-lg-block" width="6">
+                            <li class="nav-item"><a class="nav-link" href="#">Личный кабинет</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -95,38 +96,107 @@
     </header>
 
     <main class="main">
+          
+        
         <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <hr>
+                    <form id="form" class="file-upload">
+                        <div class="row mb-5 gx-5">
 
-            <mark class="nav-jetSkis-tittle">Вездеходы</mark>
+                            <div class="col-xxl-8 mb-5 mb-xxl-0">
+                                <div class="bg-secondary-soft px-4 py-5 rounded">
+                                    <div class="row g-3">
+                                        <h4 class="mb-4 mt-0 text-secondary-emphasis">Личные данные</h4>
+                                        <div class="col-md-6">
+                                            <label for="inputName" class="form-label">Имя</label>
+                                            <input id="inputName" type="text" oninput="validateName()" class="form-control" placeholder aria-label="First name">
+                                            
+                                        </div>
+                                        <div class="col-md-6"></div>
+                                        <div class="error text-danger" id="inputNameError"></div>
+                                        <div class="col-md-6">
+                                            <label for="inputEmail" class="form-label">Почта</label>
+                                            <input type="email" oninput="validateEmail()" class="form-control" id="inputEmail">
+                                        </div>
+                                        <div class="error text-danger" id="inputEmailError"></div>
+                                    </div> 
+                                </div>
+                                <div class="bg-secondary-soft px-4 py-5 rounded mt-3">
+                                    <div class="row g-3">
+                                        <h4 class="mb-4 mt-0 text-secondary-emphasis">Поменять пароль</h4>
+                                        <div class="col-md-12">
+                                            <label for="oldPassword" class="form-label">Старый пароль</label>
+                                            <input type="password" onchange="validateOldPassword()" class="form-control" id="oldPassword">
+                                            <div class="error text-danger mt-1" id="oldPasswordError"></div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="password" class="form-label">Новый пароль</label>
+                                            <input type="password" class="form-control" oninput="validatePassword()" id="password">
+                                            <div class="error text-danger mt-1" id="passwordError"></div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="confirmPassword" class="form-label">Подтвердите пароль</label>
+                                            <input type="password" class="form-control" oninput="validateConfirmPassword()" id="confirmPassword">
+                                            <div class="error text-danger mt-1" id="confirmPasswordError"></div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
 
-            <section class="section d-flex align-items-start flex-wrap flex-sm-wrap flex-md-nowrap">
-                <aside>
+                            <div class="col-xxl-4">
+                                <div class="bg-secondary-soft px-4 py-5 rounded">
+                                  <div class="row g-3">
+                                    <h4 class="mb-4 mt-0 text-secondary-emphasis">Фото профиля</h4>
+                                    <div class="text-center">
+                                      <div class="square position-relative display-2 mb-3" id="imageContainer">
+                                        <i id="defaultImage" class="fas fa-fw fa-user position-absolute top-50 start-50 translate-middle text-secondary"></i>
+                                        <img src="" hidden class="img-fluid position-absolute top-50 start-50 translate-middle" id="previewImageElement">
+                                      </div>
+                                      <input type="file" id="customFile" name="file" hidden onchange="handleImagePreview()">
+                                      <label class="btn btn-success-soft btn-block" for="customFile">Загрузить</label>
+                                      <button type="button" class="btn btn-danger-soft" onclick="removeImage()">Убрать</button>
+                          
+                                      <!-- <p class="text-muted mt-3 mb-0"><span class="me-1">Подсказка:</span>Минимальный размер 300px x 300px</p> -->
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                            
+                        </div> 
 
-                    <span class="options"><a href="#"> Параметры </a></span>
-
-                    <details class="third-detail">
-                        <summary class="brand">Бренд</summary>
-                        <div>
-                            <label>
-                                <input type="checkbox" value="Polariz" name="brand"> <span>Polariz</span>
-                            </label>
-                            <label>
-                                <input type="checkbox" value="CAN-AM" name="brand"> <span>CAN-AM</span>
-                            </label>
+                        <div class="gap-3 d-md-flex justify-content-md-end text-center">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdropLeave"  class="btn btn-danger btn-lg">Выйти из аккаунта</button>
+                            <button type="button" onclick="changeUserInformation()" class="btn btn-primary btn-lg">Сохранить изменения</button>
                         </div>
-                    </details>
-
-
-                    <button class="choose mb-2">Выбрать</button>
-                </aside>
-
-                <div class="section-card d-flex flex-wrap align-items-center justify-content-center justify-content-md-start"
-                    id="allterrain-items-container">
+                        <div class="modal fade" id="staticBackdropLeave" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h1 class="modal-title text-black" id="staticBackdropLabel">Выйти из аккаунта</h1>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body text-black" style="line-height: 30px;">
+                                    Вы точно хотите выйти из аккаунта?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" onclick="leave()" data-bs-dismiss="modal">Да</button>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Нет</button>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </form> 
                 </div>
-
-            </section>
-
+            </div>
         </div>
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script type="text/javascript">
+            
+        </script>
     </main>
 
     <footer id="footer-end" class="py-5">
@@ -152,21 +222,7 @@
                         </form>
                     </div>
                 </div>
-                <div class="modal fade" id="staticBackdropNotLoginned" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h1 class="modal-title" id="staticBackdropLabel">Личный кабинет</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body" style="line-height: 30px;">
-                                Вы не авторизовались!
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
-                            </div>
-                        </div>
-                    </div>
+                
                 <div class="modal fade" id="staticBackdrop0" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">
                       <div class="modal-content">
@@ -250,7 +306,7 @@
                             </li>
                             <li class="me-lg-2"><a data-bs-target="#staticBackdrop3"  class="btn" data-bs-toggle="modal">
                                 Магазины</button></a>
-                            <li class="me-lg-2"><a href="../../form_validation/form_validation.html" class="btn" >
+                            <li class="me-lg-2"><a href="form_validation/form_validation.html" class="btn" >
                                 Связаться</a>
                             </li>
                         </ul>
@@ -294,6 +350,10 @@
             </div>
         </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+          
 </body>
 
 </html>
