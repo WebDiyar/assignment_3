@@ -51,8 +51,9 @@
                                 21</span></a>
                         <span>
                             <div class="about nav-img">
-                                <a id="profile" href="#" onclick="checkLoginned()" ><img src="card-product/img/header/human-nav.svg" alt="human-img"></a>
-                                <img src="card-product/img/header/shop-nav.svg" alt="shop-img">
+                                <a id="profile" href="javascript:void(0);" onclick="checkLoginned()" ><img src="card-product/img/header/human-nav.svg" alt="human-img"></a>
+                                <a href="javascript:void(0);" id="cartCountLink" onclick="checkLoginnedCart()" style="text-decoration: none;"><img src="main/img/header/shop-nav.svg" alt="shop-img"><span 
+                                    id="cartCount">0</span></a>
                             </div>
                         </span>
                     </nav>
@@ -220,7 +221,9 @@
                         9 800 ₽
                     </span>
                     
-                    <div class="section2-item1-shop"><img src="main/img/section2/shop.png" alt="shop"></div>
+                    <div class="section2-item1-shop">
+                        <a href="javascript:void(0);" onclick="addToCart(getData(0))" class="cartButton"><img src="main/img/section2/shop.png" alt="shop"></a>
+                    </div>
                 </div>
 
                 <div class="section2-item2">
@@ -235,7 +238,9 @@
                     <span class="section2-item2-cost">
                         6 900 ₽
                     </span>
-                    <div class="section2-item2-shop"><img src="main/img/section2/shop.png" alt="shop"></div>
+                    <div class="section2-item2-shop">
+                        <a href="javascript:void(0);" onclick="addToCart(getData(1))" class="cartButton"><img src="main/img/section2/shop.png" alt="shop"></a>
+                    </div>
                 </div>
 
                 <div class="section2-item3">
@@ -249,7 +254,9 @@
                         68 000 ₽
                     </em>
 
-                    <div class="section2-item3-shop"><img src="main/img/section2/shop.png" alt="shop"></div>
+                    <div class="section2-item3-shop">
+                        <a href="javascript:void(0);" onclick="addToCart(getData(2))" class="cartButton"><img src="main/img/section2/shop.png" alt="shop"></a>
+                    </div>
                 </div>
 
                 <div class="section2-item4">
@@ -317,11 +324,32 @@
                         </form>
                     </div>
                 </div>
+                <div class="modal fade" id="staticBackdropCart" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title" id="staticBackdropLabel">Корзина</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body" id="cartModalBody">
+                                <!-- Тут будут все продакт -->
+                            </div>
+                            <div class="modal-footer">
+                                <div class="total-section">
+                                    <span class="me-3 just" id="totalProducts">0 товаров</span>
+                                    <span id="totalPrice">Общая стоимость: 0 ₽</span>
+                                </div>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                                <button onclick="checkCartIsEmpty('cartCount1Popular')" type="button" class="btn btn-primary" id="buyButton">Купить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="modal fade" id="staticBackdropNotLoginned" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h1 class="modal-title" id="staticBackdropLabel">Личный кабинет</h1>
+                                <h1 class="modal-title" id="staticBackdropLabel">Авторизация</h1>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body" style="line-height: 30px;">

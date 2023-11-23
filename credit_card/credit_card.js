@@ -74,4 +74,5 @@ form.addEventListener("submit", (e) => {
     cardCVVText.innerHTML = "123";
 
     alert("Вы успешно совершили покупку!");
+    window.location.replace('../index.html')
 })
