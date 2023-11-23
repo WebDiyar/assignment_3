@@ -3,19 +3,37 @@ window.onload = function() {
     let userMap = JSON.parse(user);
     let name = document.getElementById('inputName');
     let email = document.getElementById('inputEmail');
-
     name.value = userMap.name;
     email.value = userMap.email;
     
+    let picture = localStorage.getItem(userMap.name + "5photo");
+    if (picture) {
+        var imageContainer = document.getElementById('imageContainer');
+        var previewImageElement = document.getElementById('previewImageElement');
+        var defaultImage = document.getElementById('defaultImage');
 
-  };
+        previewImageElement.src = localStorage.getItem(userMap.name + "5photo");
+    
+        imageContainer.classList.add('has-image');
+        previewImageElement.style.width = '250px'; 
+        previewImageElement.style.height = '250px';
+        previewImageElement.hidden = false;
+        defaultImage.hidden = true; 
+    }
+};
+
+
+
 
 function validateName() {
-    const nameInput = document.getElementById("inputName");
-    const nameError = document.getElementById("inputNameError");
-
-    const name = nameInput.value;
-
+    let nameInput = document.getElementById("inputName");
+    let nameError = document.getElementById("inputNameError");
+    let name = nameInput.value;
+    let nameExists = localStorage.getItem(name)
+    let nameExistsMap = JSON.parse(nameExists)
+    
+    let user = localStorage.getItem('user1');
+    let userMap = JSON.parse(user);
     function isValidName(name) {
         //Russian, English or Kazakh letters 
         const namePattern = /^[А-Яа-яA-Za-zҚқҢңҒғІіІі]*$/;
@@ -25,7 +43,11 @@ function validateName() {
     if (name.length === 0 || name.length < 3 || !isValidName(name)) {
         nameError.innerHTML ='Имя должно быть не менее 3 букв и содержать только буквы';
         setInvalid(nameInput);
-    } else {
+    } else if (nameExists && nameExistsMap.name != userMap.name) {
+        nameError.innerHTML = 'Пользователь с таким именем уже существует'
+        setInvalid(nameInput);
+    }
+    else {
         nameError.innerHTML ='';
         setValid(nameInput);
     }
@@ -169,11 +191,14 @@ function changeUserInformation() {
             if ((user2Map.name == name) &&(user2Map.email == email)) {
                 alert("Вы ничего не поменяли!")
             } else {
-                    
+                    tempLS = localStorage.getItem(user2Map.name + "5photo"); 
                     localStorage.removeItem(user2Map.name);
                     localStorage.setItem(name,JSON.stringify(user1));
                     localStorage.removeItem('user1');
                     localStorage.setItem('user1',JSON.stringify(user1));
+                    localStorage.removeItem(user2Map.name + "5photo");
+                    localStorage.setItem(name + "5photo",tempLS);
+                    
                     alert("Пользователь успешно изменён!");
                     // document.getElementById("form").reset();
             }
@@ -186,10 +211,13 @@ function changeUserInformation() {
                 email: email,
                 password: password
             };
+            tempLS = localStorage.getItem(user2Map.name + "5photo"); 
             localStorage.removeItem(user2Map.name);
             localStorage.setItem(name,JSON.stringify(user1));
             localStorage.removeItem('user1');
             localStorage.setItem('user1',JSON.stringify(user1));
+            localStorage.removeItem(user2Map.name + "5photo");
+            localStorage.setItem(name + "5photo",tempLS);
             alert("Пользователь успешно изменён!");
             // document.getElementById("form").reset();
             
@@ -217,6 +245,7 @@ function setValid(element) {
     element.classList.remove('is-invalid')
 };
 
+
 function handleImagePreview() {
     var fileInput = document.getElementById('customFile');
     var imageContainer = document.getElementById('imageContainer');
@@ -225,14 +254,21 @@ function handleImagePreview() {
     var file = fileInput.files[0];
     var reader = new FileReader();
 
+    var user = localStorage.getItem('user1');
+    var userMap = JSON.parse(user);
+    
     reader.onloadend = function () {
-      previewImageElement.src = reader.result;
-      imageContainer.classList.add('has-image');
+        previewImageElement.src = reader.result;
+        if (file.type.startsWith('image/')) {
+            localStorage.setItem(userMap.name + "5photo", reader.result);
+        }
+        
+        imageContainer.classList.add('has-image');
 
-      previewImageElement.style.width = '250px'; 
-      previewImageElement.style.height = '250px';
-      previewImageElement.hidden = false;
-      defaultImage.hidden = true; 
+        previewImageElement.style.width = '250px'; 
+        previewImageElement.style.height = '250px';
+        previewImageElement.hidden = false;
+        defaultImage.hidden = true; 
     };
 
     if (file) {
@@ -241,22 +277,27 @@ function handleImagePreview() {
       previewImageElement.src = '';
       imageContainer.classList.remove('has-image');
     }
-  }
+}
 
-  function removeImage() {
+function removeImage() {
     var imageContainer = document.getElementById('imageContainer');
     var previewImageElement = document.getElementById('previewImageElement');
     var fileInput = document.getElementById('customFile');
     var defaultImage = document.getElementById('defaultImage');
+
+    var user = localStorage.getItem('user1');
+    var userMap = JSON.parse(user);
+
 
     previewImageElement.src = '';
     fileInput.value = ''; // Reset the file input
     imageContainer.classList.remove('has-image');
     defaultImage.hidden = false; 
     previewImageElement.hidden = true; 
-  }
+    localStorage.removeItem(userMap.name + "5photo")
+}
 
-  function validateForm() {
+function validateForm() {
     const email = document.getElementById("email");
     const emailError = document.getElementById("emailError");
     let valid = true;
